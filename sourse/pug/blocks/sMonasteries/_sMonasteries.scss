@@ -1,0 +1,71 @@
+// start .sMonasteries
+.sMonasteries {
+	
+	.section-title {
+		position: relative;
+		h3 {
+			text-transform: uppercase;
+		}
+
+		&__imgWrap {
+			text-align: center;
+			margin-bottom: rem(26);
+		}
+	}
+
+	&__btn {
+		margin-top: rem(20);
+		@extend .btn;
+
+		margin-bottom: rem(70);
+		@include media-breakpoint-up(xl) {
+			margin-bottom: rem(90);
+		}
+	}
+
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sMonasteries
+
+.monasteriesItem {
+	display: block;
+	text-decoration: none !important;
+	background-color: #e6e8f6;
+	margin-bottom: rem(22);
+
+	&__title {
+		display: block;
+		border-bottom: solid 1px #adabab;
+		padding-bottom: rem(15);
+		color: $body-color;
+		margin-bottom: rem(18);
+	}
+
+	&__name {
+		color: $body-color;
+		line-height: 1;
+		display: block;
+	}
+
+	&__imgWrap {
+		border: solid 1px #dddddd;
+		padding: rem(3px);
+		background-color: #fff;
+		display: block;
+	}
+
+	&__row {
+		@include roww(17px);
+	}
+
+	&__col {
+		padding-top: rem(16);
+		padding-right: rem(20);
+	}
+}

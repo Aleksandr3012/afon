@@ -1,0 +1,53 @@
+mixin topLine()
+	// start topLine
+	+b.topLine.section#topLine&attributes(attributes)
+		.container
+			.row.align-items-center
+				.col-auto.d-lg-none
+					+b.toggle-menu-mobile--js
+						span
+				.col-auto
+					+e.logo(href="/")
+						img.d-none.d-lg-block.res-i(src="img/@2x/logo.png", alt="СВЯТОЙ АФОН")
+						img.d-lg-none.res-i(src="img/@2x/logo-mob.png", alt="СВЯТОЙ АФОН")
+				+e.searchCol.col-lg-8.col-xl-7
+					+e.top.d-none.d-lg-flex
+						+e.mail(href="mailto:pochta@naafone.ru")
+							img.res-i(src="img/@2x/mail.png", alt="")
+							|pochta@naafone.ru
+						+e.timetable
+							img.res-i(src="img/@2x/clock.png", alt="")
+							|Пн-Пт: 9:00 - 18:00, Сб: 10:00 - 14:00, Вс - выходной
+					+e.search
+						+input('Введите Ваш запрос','search')
+						+e.btnSearch(type="submit")
+							+icon('search')
+				.col
+					+b.basket
+						.row
+							.col-xl
+								+e.basket
+									+icon('basket')
+									span.d-none.d-lg-block Корзина:
+								+e.text.d-none.d-lg-block Здравствуйте, у вас
+							+e.col.col-xl
+								+e.quantly 0
+								+e.notes.d-none.d-lg-block записок
+				+e.col.col-12
+					+b.submitNotes
+						+e.btnWrap
+							+e.btn Подать записки
+							+e.submenuWrap
+								+e.UL.submenu
+									+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Записки в монастыри
+									+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Записки святым
+									+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Записки к иконам
+									+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Записки к праздникам
+									+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Записки к постам
+					+b.UL.navMenu--bottomMnu.d-none.d-lg-flex
+						+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Молебны о помощи
+						+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Поставить свечи
+						+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") О нас
+						+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Наш Блог
+
+	// end topLine
