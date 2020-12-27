@@ -1,6 +1,126 @@
 
 	// start .sForm
 	.sForm {
+
+		p{
+				@include media-breakpoint-up(xl) {
+					text-align: left;
+				}
+				text-align: center;
+			strong{
+				color: $primary;
+			}
+		}
+		&__row{
+			@include media-breakpoint-up(xl) {
+				--bs-gutter-x: 49px
+			}
+		}
+		.form-wrap{
+			@include media-breakpoint-up(xl) {
+						margin-bottom: 60px;
+			}
+			form{
+					@include media-breakpoint-up(sm){
+						border-width: rem(16);
+						padding: rem(35) rem(27);
+					}
+					padding: rem(25) rem(17);
+				border: rem(8) solid $secondary;
+			}
+				margin-left: auto;
+				margin-right: auto;
+			max-width: rem(635);
+			position: relative;
+			&__count-block{
+					@include media-breakpoint-up(xl){
+
+						position: absolute;
+						z-index: 2;
+						bottom: -50px;
+						// right: rem(345);
+						left: -150px;
+						display: block;
+						margin-bottom: 0;
+					}
+					margin-bottom: 40px;
+					display: flex;
+						@include media-breakpoint-up(sm){
+
+							align-items: center;
+						}
+						justify-content: center;
+						picture {
+								@include media-breakpoint-up(xl){
+
+									margin-left: -30px;
+								}
+								margin-left: -100px;
+							z-index: -1;
+
+							@include media-breakpoint-up(xl) {
+								margin-left: 0;
+								position: absolute;
+								left: 60%;
+								bottom: rem(-20);
+								width: rem(355);
+							}
+						}
+			}	
+			&__count-number{
+				text-align: center;
+				color: #ffffff;
+				width: 80px;
+				height: 80px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				 background-color: $secondary;
+				 flex: 0 0 auto;
+				 	@include media-breakpoint-up(xl){
+
+						 margin-top: 0;
+						}
+						margin-top: rem(60);
+	
+			}
+			&__footer{
+					@include media-breakpoint-up(xl){
+
+						max-width: rem(345);
+						margin-left: auto;
+						text-align: right;
+					}
+					text-align: center;
+			}
+			&__btn{ 
+				@extend .btn-sm;
+				padding-left: rem(18);
+				padding-right: rem(18);
+				margin-bottom: 10px;
+			}
+			&__add{
+				display: inline-flex;
+				align-items: center;
+				 font-size: $small;
+				 color: #000000;
+				 margin-bottom: rem(25);
+				 &::before{
+					 content: '+';
+					 width: rem(40px);
+					 height: rem(40px);
+					 flex: 0 0 auto;
+					 border: 1px solid $secondary;
+					//  display: block;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					font-size: rem(32);
+					margin-right: rem(15);
+				 }
+			}
+		}
 		 
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}

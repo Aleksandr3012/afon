@@ -1,12 +1,18 @@
 .form-wrap{
+	.btn-sm{
+		font-size: $em-base;
+		padding: rem(4) rem(10);
+	}
  	&__input-wrap{
 			// @extend .form-group;
-			
-		}
+				margin-bottom: rem(35);
+		}	
 		&__input{
 			// @extend .form-control;
 		//  outline: 0 !important;
 		 resize: none;
+			border: 1px solid $secondary; 
+			font-size: $small;
  	}
  	&__btn{
  		cursor: pointer;

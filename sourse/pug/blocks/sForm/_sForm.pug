@@ -1,9 +1,30 @@
 mixin sForm()
 	// start sForm
-	+b.SECTION.sForm.section#sForm&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 sForm
-				
-			.row
+	+b.sForm.section#sForm&attributes(attributes)
+		.container 
+			+e.row.row
+				.col
+					p #[strong «Именной кирпичик»] — это старинная традиция, когда на Руси храмы строили всем миром! <br/> «Именной кирпичик» — это вечная молитва о вас, ваших родных и близких, которая за каждой Литургией будет возноситься ко престолу Божиему, до тех пор, пока стоит Храм и Монастырь. За каждой Литургией священник возносит молитву в особом прошении на ектении за создателей, благотворителей и украсителей своего храма или монастыря.
+				.col-xl-auto
+
+					+b.form-wrap
+						+e.count-block
+							+e.count-number 0 руб. 
+							+pic('imennye_kirpichi.png','',0)
+						form
+							+e.row.row
+								.col-md-6
+									+input("Введите имя")
+								.col-md-6
+									+input("Введите имя")
+								.col-md-6
+									+input("Введите имя")
+								.col-md-6
+									+input("Введите имя")
+							+e.footer
+								+e.add(href="#")
+									span.text-start выбрать Храм (ы) или Монастырь (и)
+								+e.btns
+									+e.btn.btn.btn-primary(type="submit") Сохранить в корзину
+									+e.btn.btn.btn-outline-secondary(type="submit") Оплатить
 	// end sForm

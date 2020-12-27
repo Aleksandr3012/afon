@@ -1,0 +1,40 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sMonasteries/_sMonasteries.pug
+include ../blocks/sPrayers/_sPrayers.pug
+include ../blocks/sNameBrick/_sNameBrick.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAboutBrick/_sAboutBrick.pug
+include ../blocks/sWork/_sWork.pug
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Именной кирпичик'
+	title= title
+block pagecontent
+
+	+mob-mnu()
+	+header()
+		+top-nav()
+		+topLine() 
+	.container
+		+breadcrumb('Главная страница',title)
+	+b.page-title
+		.container
+				h1
+					span= title
+	+sForm
+	//- +sMonasteries()
+	//- +sPrayers()
+	+sNameBrick('Храмы и&nbsp;монастыри, участвующие в&nbsp;проекте')
+	+sAboutBrick
+	+sWork
+	//- +sAbout()
+	+footer()
+
+
+	
