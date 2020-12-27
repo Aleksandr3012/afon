@@ -34,13 +34,14 @@
 }
 
 .swiper-button-hand {
-	background-color: transparent !important;
+	background: transparent !important;
+	box-shadow: none;
 	border: none;
 	border-radius: 0;
-	top: 30%;
+	bottom: 43%;
 
 	.icon {
-		font-size: rem(43);
+		font-size: rem(42);
 		color: #000;
 		@include mt;
 	}

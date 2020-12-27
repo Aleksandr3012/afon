@@ -1,6 +1,8 @@
 // start .sPrayers
 .sPrayers {
-	
+	--sPT: #{rem(2)};
+	--sPB: #{rem(61)};
+	--sTPB: #{rem(27)};
 	.section-title {
 		h3 {
 			text-transform: uppercase;
@@ -34,12 +36,15 @@
 	height: calc(100% - #{rem(21)});
 	margin-bottom: rem(21);
 	min-height: rem(293);
-	padding: rem(23);
+	padding: rem(13);
+	@include media-breakpoint-up(md) {
+		padding: rem(23);
+	}
 	display: block;
 	text-decoration: none;
 
 	&:hover {
-		padding: rem(10);
+		padding: rem(13);
 	}
 
 	&__wrap {
