@@ -42,6 +42,64 @@
 		font-weight: 700;
 	}
 
+	&__wrap {
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(100);
+		}
+
+		margin-bottom: rem(35);
+	}
+
+	&__phoneWrap {
+		display: flex;
+		align-items: center;
+	}
+
+	&__phone {
+		a {
+			color: #fff;
+			text-decoration: none;
+			display: block;
+		}
+	}
+
+	&__phoneIcon {
+		margin: rem(15);
+	}
+
+	&__call {
+		text-transform: uppercase;
+		color: #fff;
+		border-bottom: solid 1px;
+		display: inline-block;
+		margin-bottom: rem(15);
+		margin-left: rem(13);
+		margin-top: rem(15);
+	}
+
+	.soc{
+		padding-left: rem(13);
+	}
+
+	&__foot {
+		padding-top: rem(17);
+		color: #fff;
+	}
+
+	&__link {
+		border-bottom: 1px solid;
+		display: inline-block;
+		color: #fff;
+		font-size: $small;
+		font-weight: 300;
+		&:not(:last-child) {
+			margin-right: rem(10);
+			@include media-breakpoint-up(xl) {
+				margin-right: rem(30);
+			}
+		}
+	}
+
 
 @include media-breakpoint-up(xs) {}
 @include media-breakpoint-between(md, xl) {}

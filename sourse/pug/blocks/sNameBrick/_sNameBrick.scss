@@ -1,15 +1,13 @@
 // start .sNameBrick
 .sNameBrick {
-	--sTPB: #{rem(44)};
+	--sTPB: #{rem(24)};
 	@include media-breakpoint-up(md) {
 		--sPT: #{rem(58)};
+		--sTPB: #{rem(44)};
+
 	}
 	position: relative;
 
-	.page-title {
-		padding-bottom: var(--sTPB);
-
-	}
 
 	&__slider {
 		max-width: 88%;
