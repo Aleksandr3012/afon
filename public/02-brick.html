@@ -7,6 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
 		<div class="main-wrapper">
@@ -214,7 +217,7 @@
 				</div>
 				<!-- end sForm-->
 				<!-- start sNameBrick-->
-				<section class="sNameBrick section" id="sNameBrick">
+				<section class="sNameBrick section bg-wrap" id="sNameBrick">
 					<!-- picture-->
 					<picture class="picture-bg d-none d-lg-block"> 
 						<noscript class="loading-lazy">
@@ -230,8 +233,8 @@
 					</picture>
 					<!-- /picture-->
 					<div class="container">
-						<div class="section-title page-title">
-							<h2><span>Храмы и&amp;nbsp;монастыри, участвующие в&amp;nbsp;проекте</span></h2>
+						<div class="section-title text-center page-title">
+							<h2><span>Именной кирпичик</span></h2>
 						</div>
 						<div class="sNameBrick__sliderWrap">
 							<div class="sNameBrick__slider sNameBrick__slider--js swiper-container">
@@ -312,12 +315,105 @@
 				</div>
 				<!-- end sAboutBrick-->
 				<!-- start sWork-->
-				<section class="sWork section" id="sWork">
+				<section class="sWork section bg-wrap" id="sWork">
+					<!-- picture-->
+					<picture class="picture-bg d-none d-lg-block"> 
+						<noscript class="loading-lazy">
+							<source type="image/webp" srcset="img/@2x/webp/nameBrick-bg.webp"/><img class="object-fit-js" src="img/@2x/nameBrick-bg.jpg" alt="" loading="lazy"/>
+						</noscript>
+					</picture>
+					<!-- /picture-->
+					<!-- picture-->
+					<picture class="picture-bg d-lg-none"> 
+						<noscript class="loading-lazy">
+							<source type="image/webp" srcset="img/@2x/webp/work-bg-mob.webp"/><img class="object-fit-js" src="img/@2x/work-bg-mob.jpg" alt="" loading="lazy"/>
+						</noscript>
+					</picture>
+					<!-- /picture-->
 					<div class="container">
-						<div class="section-title text-center">
-							<h2>sWork</h2>
+						<div class="section-title text-center page-title">
+							<h2><span>Как это работает?</span></h2>
 						</div>
-						<div class="row"></div>
+						<div class="row">
+									<div class="sWork__col col-xl-2 col-md-4 col-sm-4">
+										<div class="sWork__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/work-1.webp"/><img src="img/@2x/work-1.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sWork__text">Вы&nbsp;через специальную форму указываете имена людей, которые будут подписаны на&nbsp;именных кирпичах.
+										</div>
+									</div>
+									<div class="sWork__col col-xl-2 col-md-4 col-sm-4">
+										<div class="sWork__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/work-2.webp"/><img src="img/@2x/work-2.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sWork__text">После ввода имен, вы&nbsp;выбираете Храм или Монастырь в&nbsp;который вы&nbsp;хотите сделать пожертвование.
+										</div>
+									</div>
+									<div class="sWork__col col-xl-2 col-md-4 col-sm-4">
+										<div class="sWork__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/work-3.webp"/><img src="img/@2x/work-3.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sWork__text">Мы&nbsp;передаем список имен и&nbsp;ваше пожертвование в&nbsp;Храм или Монастырь.
+										</div>
+									</div>
+									<div class="sWork__col col-xl-2 col-md-4 col-sm-4">
+										<div class="sWork__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/work-4.webp"/><img src="img/@2x/work-4.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sWork__text">Служители Храма или Монастыря подписывают именные кирпичи именами указанными вами в&nbsp;записке.
+										</div>
+									</div>
+									<div class="sWork__col col-xl-2 col-md-4 col-sm-4">
+										<div class="sWork__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/work-5.webp"/><img src="img/@2x/work-5.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sWork__text">Кирпичи идут на&nbsp;строительство Храма или Монастыря, а&nbsp;имена записываются в&nbsp;специальную церковную книгу для поминовения на&nbsp;каждом богослужении.
+										</div>
+									</div>
+									<div class="sWork__col col-xl-2 col-md-4 col-sm-4">
+										<div class="sWork__img-wrap">
+											<!-- picture-->
+											<picture> 
+												<noscript class="loading-lazy">
+													<source type="image/webp" srcset="img/@2x/webp/work-6.webp"/><img src="img/@2x/work-6.png" alt="" loading="lazy"/>
+												</noscript>
+											</picture>
+											<!-- /picture-->
+										</div>
+										<div class="sWork__text">После записи в&nbsp;церковную книгу на&nbsp;вашу электронную почту мы&nbsp;пришлем сертификат с&nbsp;указанными вами именами и&nbsp;указанием Храма или Монастыря.
+										</div>
+									</div>
+						</div>
 					</div>
 				</section>
 				<!-- end sWork-->
@@ -407,9 +503,6 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
-		<link href="css/main.min.css" rel="stylesheet"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

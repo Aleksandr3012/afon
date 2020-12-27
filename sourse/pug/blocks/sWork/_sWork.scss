@@ -1,7 +1,42 @@
 
 // start .sWork
 .sWork {
-	
+	text-align: center;
+	--sPB:0;
+	.row{
+		justify-content: center;
+	}
+	&__text{
+		font-size: $small;
+		line-height: 1.13;
+	}
+	&__img-wrap{
+		height: rem(86);
+		margin-bottom: rem(33);
+	}
+	&__col{
+		position: relative;
+		margin-bottom: rem(45);
+		max-width: 280px;
+		@include media-breakpoint-up(sm) {
+
+			&:not(:last-child){
+				&::before{
+					content: url(../img/@2x/arrow.png);
+					position: absolute;
+					left: 100%;
+					margin-left: -31px;
+					top: rem(23);
+					display: block;
+				}
+			}
+			&:nth-child(even){
+				&::before{
+					transform: rotate3d(1,0,0,180deg);
+			}
+		}
+	}
+	}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

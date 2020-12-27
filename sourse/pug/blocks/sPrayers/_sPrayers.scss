@@ -9,18 +9,18 @@
 		}
 	}
 
-	&__col {
-		&:nth-child(odd) {
-			.prayerItem {
-				border-color: $secondary;
-			}
-		}
-		&:nth-child(even) {
-			.prayerItem {
-				border-color: $primary;
-			}
-		}
-	}
+	// &__col {
+	// 	&:nth-child(odd) {
+	// 		.prayerItem {
+	// 			border-color: $secondary;
+	// 		}
+	// 	}
+	// 	&:nth-child(even) {
+	// 		.prayerItem {
+	// 			border-color: $primary;
+	// 		}
+	// 	}
+	// }
 
 	@include media-breakpoint-up(sm) {}
 	//
@@ -32,7 +32,8 @@
 } // end.sPrayers
 
 .prayerItem {
-	border: solid 1px;
+	border: solid 1px $primary;
+
 	height: calc(100% - #{rem(21)});
 	margin-bottom: rem(21);
 	min-height: rem(174);
@@ -40,7 +41,12 @@
 		min-height: rem(293);
 	}
 	padding: rem(13);
+	.icon{
+		color: #ffffff;
+		font-size: 50px;
+	}
 	@include media-breakpoint-up(md) {
+		min-height: rem(293);
 		padding: rem(23);
 	}
 	display: block;

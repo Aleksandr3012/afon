@@ -7,6 +7,9 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<link type="image/ico" href="img/favicon.ico" rel="shortcut icon"><meta name="format-detection" content="telephone=no"> 
+		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
+		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
+		<link href="css/main.min.css" rel="stylesheet"/>
 	</head>
 	<body> 
 		<div class="main-wrapper">
@@ -581,7 +584,7 @@
 							<h3>Молебны о помощи</h3>
 						</div>
 						<div class="row">
-							<div class="sPrayers__col col-lg-6"><a class="prayerItem text-center" href="#"><span class="prayerItem__wrap">
+							<div class="sPrayers__col col-lg-6"><a class="prayerItem text-center border-secondary" href="#"><span class="prayerItem__wrap">
 								<!-- picture-->
 								<picture class="picture-bg"> 
 									<noscript class="loading-lazy">
@@ -592,16 +595,9 @@
 									</noscript>
 								</picture>
 								<!-- /picture-->
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source type="image/webp" srcset="img/@2x/webp/ornament.webp" media="(min-width:576px)"/>
-										<source type="image/webp" srcset="img/@1x/webp/ornament.webp"/>
-										<source type="image/png" srcset="img/@2x/ornament.png" media="(min-width:576px)"/>
-										<source type="image/png" srcset="img/@1x/ornament.png"/><img src="img/@2x/ornament.png" alt="" loading="lazy"/>
-									</noscript>
-								</picture>
-								<!-- /picture--><span class="prayerItem__title">молебен здравствующим</span></span></a>
+								<svg class="icon icon-icon ">
+									<use xlink:href="img/svg/sprite.svg#icon"></use>
+								</svg><span class="prayerItem__title">молебен здравствующим</span></span></a>
 							</div>
 							<div class="sPrayers__col col-lg-6"><a class="prayerItem text-center" href="#"><span class="prayerItem__wrap">
 								<!-- picture-->
@@ -614,18 +610,11 @@
 									</noscript>
 								</picture>
 								<!-- /picture-->
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source type="image/webp" srcset="img/@2x/webp/ornament.webp" media="(min-width:576px)"/>
-										<source type="image/webp" srcset="img/@1x/webp/ornament.webp"/>
-										<source type="image/png" srcset="img/@2x/ornament.png" media="(min-width:576px)"/>
-										<source type="image/png" srcset="img/@1x/ornament.png"/><img src="img/@2x/ornament.png" alt="" loading="lazy"/>
-									</noscript>
-								</picture>
-								<!-- /picture--><span class="prayerItem__title">Какие бывают записки?</span></span></a>
+								<svg class="icon icon-icon ">
+									<use xlink:href="img/svg/sprite.svg#icon"></use>
+								</svg><span class="prayerItem__title">Какие бывают записки?</span></span></a>
 							</div>
-							<div class="sPrayers__col col-lg-6"><a class="prayerItem text-center" href="#"><span class="prayerItem__wrap">
+							<div class="sPrayers__col col-lg-6"><a class="prayerItem text-center border-secondary" href="#"><span class="prayerItem__wrap">
 								<!-- picture-->
 								<picture class="picture-bg"> 
 									<noscript class="loading-lazy">
@@ -636,16 +625,9 @@
 									</noscript>
 								</picture>
 								<!-- /picture-->
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source type="image/webp" srcset="img/@2x/webp/ornament.webp" media="(min-width:576px)"/>
-										<source type="image/webp" srcset="img/@1x/webp/ornament.webp"/>
-										<source type="image/png" srcset="img/@2x/ornament.png" media="(min-width:576px)"/>
-										<source type="image/png" srcset="img/@1x/ornament.png"/><img src="img/@2x/ornament.png" alt="" loading="lazy"/>
-									</noscript>
-								</picture>
-								<!-- /picture--><span class="prayerItem__title">молебен<br> усопшим</span></span></a>
+								<svg class="icon icon-icon ">
+									<use xlink:href="img/svg/sprite.svg#icon"></use>
+								</svg><span class="prayerItem__title">молебен<br> усопшим</span></span></a>
 							</div>
 							<div class="sPrayers__col col-lg-6"><a class="prayerItem text-center" href="#"><span class="prayerItem__wrap">
 								<!-- picture-->
@@ -658,23 +640,16 @@
 									</noscript>
 								</picture>
 								<!-- /picture-->
-								<!-- picture-->
-								<picture> 
-									<noscript class="loading-lazy">
-										<source type="image/webp" srcset="img/@2x/webp/ornament.webp" media="(min-width:576px)"/>
-										<source type="image/webp" srcset="img/@1x/webp/ornament.webp"/>
-										<source type="image/png" srcset="img/@2x/ornament.png" media="(min-width:576px)"/>
-										<source type="image/png" srcset="img/@1x/ornament.png"/><img src="img/@2x/ornament.png" alt="" loading="lazy"/>
-									</noscript>
-								</picture>
-								<!-- /picture--><span class="prayerItem__title">Как работает сервис святой афон?</span></span></a>
+								<svg class="icon icon-icon ">
+									<use xlink:href="img/svg/sprite.svg#icon"></use>
+								</svg><span class="prayerItem__title">Как работает сервис святой афон?</span></span></a>
 							</div>
 						</div>
 					</div>
 				</section>
 				<!-- end sPrayers-->
 				<!-- start sNameBrick-->
-				<section class="sNameBrick section" id="sNameBrick">
+				<section class="sNameBrick section bg-wrap" id="sNameBrick">
 					<!-- picture-->
 					<picture class="picture-bg d-none d-lg-block"> 
 						<noscript class="loading-lazy">
@@ -690,7 +665,7 @@
 					</picture>
 					<!-- /picture-->
 					<div class="container">
-						<div class="section-title page-title">
+						<div class="section-title text-center page-title">
 							<h2><span>Именной кирпичик</span></h2>
 						</div>
 						<div class="sNameBrick__sliderWrap">
@@ -845,9 +820,6 @@
 		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
-		<link href="libs/swiper/css/swiper.min.css" rel="stylesheet"/>
-		<link href="libs/@fancyapps/fancybox/jquery.fancybox.min.css" rel="stylesheet"/>
-		<link href="css/main.min.css" rel="stylesheet"/>
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>
 		<!-- modal libs-->
 		<script src="libs/jquery/jquery.min.js"></script>

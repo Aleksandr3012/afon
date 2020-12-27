@@ -1,0 +1,62 @@
+mixin sBasket(data)
+	// start sBasket
+	+b.sBasket.section#sBasket&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					+e.group
+						+e.group-title 1. Ваши записки
+						+e.item
+							.row
+								.col
+									+e.title.small Записка о здравии на Литургию в день памяти преподобного Стилиана Пафлагонского в Свято-Вознесенскую Давидову пустынь
+									.small.strong.text-secondary Вася
+								.col-auto.text-end.small
+									+e.item-control.small
+										+e.edit.text-secondary(href="#") Редактировать   
+										+e.delete(href="#")  Удалить
+									+e.price.strong 100 руб.
+									
+						+e.item
+							.row
+								.col
+									+e.title.small Свеча маленькая о здравии в Свято-Вознесенскую Давидову пустынь
+								.col-auto.text-end.small
+									+e.item-control
+										+b.block-add
+											button -
+											input(type="number" value='1' )
+											button +
+										+e.delete(href="#")  Удалить
+									+e.price.strong 100 руб.
+						p
+							strong Общая сумма:
+							| 
+							strong.tdu.text-primary 200
+							| 
+							strong.text-primary руб.
+
+				.col-lg-6
+					+e.group
+						+e.group-title 2. Ваши контактные данные
+						p: em Чтобы получать уведомления о движении ваших записок - введите имя и адрес эл. почты
+						+b.form-wrap
+							+input('','email','Ваш e-mail:') 
+							+input('','text','Ваш имя:')
+					+e.group
+						+e.group-title 3. Данные карты
+						+b.form-wrap
+							+input('','text','Номер карты')
+							.row
+								+e.col-date.col-auto
+									+input('','text','мм')
+								+e.col-date.col-auto
+									+input('','text','гг')
+								.col
+								+e.col-cvc.col-auto
+									+input('','text','cvc/cvv2')
+			+e.footer
+				+in-c()
+					+e.SPAN.text  Я принимаю условия #[a.text-secondary.tdu(href="#") Договора оферты]
+				button.btn.btn-primary ОПЛАТИТЬ
+	// end sBasket

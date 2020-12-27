@@ -6,17 +6,26 @@ mixin sPrayers(data)
 				h3 Молебны о помощи
 				
 			.row
-				+prayerItem('1','молебен здравствующим')
+				+prayerItem('1','молебен здравствующим').border-secondary
 				+prayerItem('2','Какие бывают записки?')
-				+prayerItem('3',`молебен<br> усопшим`)
+				+prayerItem('3',`молебен<br> усопшим`).border-secondary
 				+prayerItem('4','Как работает сервис святой афон?')
 	// end sPrayers
 
 mixin prayerItem(img,t)
 	+e.col.col-lg-6
-		+b.prayerItem.text-center(href="#")
+		+b.prayerItem.text-center(href="#")&attributes(attributes)
 			+e.wrap
 				+pic(`prayer-bg-${img}.jpg`,'bg')(class="picture-bg")
-				+pic('ornament.png')
+				+icon('icon')
 				+e.title!= t
 
+
+mixin sPrayers4(data)
+	// start sPrayers
+	+b.SECTION.sPrayers.section#sPrayers&attributes(attributes)
+		.container 
+			.row
+				+prayerItem('2','Какие бывают записки?') 
+				+prayerItem('4','Как работает сервис святой афон?')
+	// end sPrayers
