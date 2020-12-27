@@ -477,7 +477,7 @@ iframe {
 	position: relative;
 	width: 100%;
 	overflow: hidden;
-	h1{
+	h1, h2{
 		@extend .h3;
 		font-weight: 700;
 		text-transform: uppercase;
@@ -501,7 +501,7 @@ iframe {
 				@include media-breakpoint-up(sm){
 
 					position: absolute;
-					top: 0;
+					@include a-cent(y);
 				}
 				text-align: center;
 			display: inline-block;
