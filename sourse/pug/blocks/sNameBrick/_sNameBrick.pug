@@ -1,9 +1,28 @@
 mixin sNameBrick(data)
 	// start sNameBrick
 	+b.SECTION.sNameBrick.section#sNameBrick&attributes(attributes)
+		+pic('nameBrick-bg.jpg','bg','')(class="picture-bg d-none d-lg-block")
+		+pic('nameBrick-mob-bg.jpg','bg','')(class="picture-bg d-lg-none")
 		.container
 			+b.section-title.text-center
-				h2 sNameBrick
-				
-			.row
+				+e.imgWrap.d-lg-none
+					+pic('monasteries-title-img.png','','')
+				h2 Именной кирпичик
+				+e.imgWrap.d-none.d-md-block.d-lg-none
+					+pic('monasteries-title-img.png','','')
+			+e.sliderWrap
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						mixin slide(i,t)
+							+e.slide.swiper-slide.text-center
+								picture
+									source.swiper-lazy(srcset="#" data-srcset=`img/@2x/webp/nameBrick-${i}.webp` type="image/webp")
+									img.swiper-lazy(src="#" data-src=`img/@2x/nameBrick-${i}.jpg`, alt="")
+								+e.title!= t
+						+slide('1',`Сретенский монастырь`)
+						+slide('2',`Свято&#8209;Троице Серапионова мужская пустынь`)
+						+slide('3',`Успенский Шаровкин женский монастырь`)
+						+slide('4',`Храм Введения во Храм Пресвятой Богородицы дер. Хотово`)
+						+slide('5',`Храм в&nbsp;честь иконы Божией Матери &quot;Живоносный Источник&quot; п&nbsp;Рощино`)
+				+arrow
 	// end sNameBrick

@@ -3,7 +3,20 @@ mixin sPrayers(data)
 	+b.SECTION.sPrayers.section#sPrayers&attributes(attributes)
 		.container
 			+b.section-title.text-center
-				h2 sPrayers
+				h3 Молебны о помощи
 				
 			.row
+				+prayerItem('1','молебен здравствующим')
+				+prayerItem('2','Какие бывают записки?')
+				+prayerItem('3',`молебен<br> усопшим`)
+				+prayerItem('4','Как работает сервис святой афон?')
 	// end sPrayers
+
+mixin prayerItem(img,t)
+	+e.col.col-lg-6
+		+b.prayerItem.text-center(href="#")
+			+e.wrap
+				+pic(`prayer-bg-${img}.jpg`,'bg')(class="picture-bg")
+				+pic('ornament.png')
+				+e.title!= t
+

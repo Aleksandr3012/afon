@@ -298,6 +298,34 @@ function eventHandler() {
 		freeModeMomentum: true,
 
 	});
+
+	const sNameBrickslider = new Swiper('.sNameBrick__slider--js', {
+		// ...defaultSl,
+		slidesPerView: 1,
+		spaceBetween: 32,
+		loop: true,
+		breakpoints: {
+			576: {
+				slidesPerView: 2
+			},
+			768: {
+				slidesPerView: 3
+			},
+			992: {
+				slidesPerView: 4
+			},
+			1200: {
+				slidesPerView: 5
+			}
+		},
+		navigation: {
+			nextEl: '.sNameBrick .swiper-button-next',
+			prevEl: '.sNameBrick .swiper-button-prev',
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
 	// modal window
 
 };

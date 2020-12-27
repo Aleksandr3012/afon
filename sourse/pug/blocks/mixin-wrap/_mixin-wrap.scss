@@ -21,7 +21,6 @@
 	 
 
 }
- 
 
 .counter{
 	counter-reset: num;
@@ -30,6 +29,25 @@
 		&::before {
 			content: counter(num);
 			counter-increment: num;
+		}
+	}
+}
+
+.swiper-button-hand {
+	background-color: transparent !important;
+	border: none;
+	border-radius: 0;
+	top: 30%;
+
+	.icon {
+		font-size: rem(43);
+		color: #000;
+		@include mt;
+	}
+
+	&:hover {
+		.icon {
+			color: $secondary;
 		}
 	}
 }

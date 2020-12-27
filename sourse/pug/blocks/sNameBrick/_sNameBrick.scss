@@ -1,7 +1,28 @@
+// start .sNameBrick
+.sNameBrick {
+	position: relative;
 
-	// start .sNameBrick
-	.sNameBrick {
-		 
+	.section-title {
+		@include media-breakpoint-down(lg) {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+	}
+
+	&__slider {
+		max-width: 90%;
+		margin: 0 auto;
+	}
+
+	&__sliderWrap {
+		position: relative;
+	}
+
+
+
+
+
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}

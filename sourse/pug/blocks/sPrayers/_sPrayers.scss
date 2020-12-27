@@ -1,10 +1,25 @@
+// start .sPrayers
+.sPrayers {
+	
+	.section-title {
+		h3 {
+			text-transform: uppercase;
+		}
+	}
 
-	// start .sPrayers
-	.sPrayers {
-		 
-	@include media-breakpoint-up(xl) {}
-	@include media-breakpoint-up(lg) {}
-	@include media-breakpoint-up(md) {}
+	&__col {
+		&:nth-child(odd) {
+			.prayerItem {
+				border-color: $secondary;
+			}
+		}
+		&:nth-child(even) {
+			.prayerItem {
+				border-color: $primary;
+			}
+		}
+	}
+
 	@include media-breakpoint-up(sm) {}
 	//
 	@include media-breakpoint-between(md, xl) { }
@@ -13,3 +28,34 @@
 	//
 	@include media-breakpoint-down(xl) {}
 } // end.sPrayers
+
+.prayerItem {
+	border: solid 1px;
+	height: calc(100% - #{rem(21)});
+	margin-bottom: rem(21);
+	min-height: rem(293);
+	padding: rem(23);
+	display: block;
+	text-decoration: none;
+
+	&:hover {
+		padding: rem(10);
+	}
+
+	&__wrap {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+	}
+
+	&__title {
+		margin-top: rem(18);
+		@extend .h3;
+		text-transform: uppercase;
+		color: #fff;
+		max-width: rem(400);
+	}
+}
