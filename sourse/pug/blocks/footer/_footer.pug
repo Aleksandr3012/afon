@@ -26,14 +26,20 @@ mixin footer()
 								li: a(href="#") О нас
 								li: a(href="#") Наш Блог
 				.col
-					+e.phoneWrap
-						+e.phoneIcon
-							img.res-i(src="img/@2x/phone.png", alt="" loading="lazy")
-						+e.phone
-							a(href="tel:+7(495)4099235") +7 (495) 409-92-35
-							a(href="tel:+7(965)1393510") +7 (965) 139-35-10
-					+e.call(href="#") ЗАКАЗАТЬ ЗВОНОК
-					+soc
+					+e.wrap
+						+e.phoneWrap
+							+e.phoneIcon
+								img.res-i(src="img/@2x/phone.png", alt="" loading="lazy")
+							+e.phone
+								a(href="tel:+7(495)4099235") +7 (495) 409-92-35
+								a(href="tel:+7(965)1393510") +7 (965) 139-35-10
+						+e.call(href="#") ЗАКАЗАТЬ ЗВОНОК
+						+soc
+					+e.btn(href="#") НАПИСАТЬ РУКОВОДИТЕЛЮ
+				+e.col.col-lg-8
+					+e.link(href="#") Пользовательское соглашение
+					+e.link(href="#") Публичная оферта
+					+e.link(href="#") Информация о платежах
 
 
 

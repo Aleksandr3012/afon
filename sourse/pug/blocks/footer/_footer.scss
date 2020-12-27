@@ -11,13 +11,21 @@
 			&::before {
 				content: '';
 				position: absolute;
-				
+
 			}
 		}
 	}
 
-
-
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+		text-transform: uppercase;
+	}
+	
+	&__listTitle {
+		color: #fff;
+		font-weight: 700;
+	}
 
 
 @include media-breakpoint-up(xs) {}
