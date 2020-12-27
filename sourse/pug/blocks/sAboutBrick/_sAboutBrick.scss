@@ -5,9 +5,26 @@
 
 		color: #ffffff;
 		background-color: $secondary;
-		display: flex;
+		
+		@include media-breakpoint-up(lg) {
+			display: flex;
+		}
 		picture{
-			width: 497px;
+			position: relative;
+			@include block(721,434);
+			img{
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+			@include media-breakpoint-up(xl) {
+				width: 497px;
+			}
+			
+			@include media-breakpoint-up(lg) {
+				width: 397px;
+			}
+
 			flex: 0 0 auto;
 		}
 	}
@@ -28,4 +45,7 @@
 	@include media-breakpoint-only(xl) {}
 	//
 	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-down(sm) {
+		text-align: center;
+	}
 } // end.sAboutBrick

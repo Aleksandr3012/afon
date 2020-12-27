@@ -1,11 +1,11 @@
 mixin sNameBrick(t="Именной кирпичик")
 	// start sNameBrick
-	+b.SECTION.sNameBrick.section#sNameBrick&attributes(attributes)
+	+b.SECTION.sNameBrick.section.bg-wrap#sNameBrick&attributes(attributes)
 		+pic('nameBrick-bg.jpg','bg','')(class="picture-bg d-none d-lg-block")
 		+pic('nameBrick-mob-bg.jpg','bg','')(class="picture-bg d-lg-none")
 		.container
 			+b.section-title.text-center
-				h2 Именной кирпичик
+				h2: span Именной кирпичик
 			+e.sliderWrap
 				+e.slider--js.swiper-container
 					.swiper-wrapper

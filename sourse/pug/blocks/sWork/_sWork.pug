@@ -1,9 +1,26 @@
 mixin sWork(data)
 	// start sWork
-	+b.SECTION.sWork.section#sWork&attributes(attributes)
+	+b.SECTION.sWork.section.bg-wrap#sWork&attributes(attributes)
+		+pic('nameBrick-bg.jpg','bg','')(class="picture-bg d-none d-lg-block")
+		+pic('work-bg-mob.jpg','bg','')(class="picture-bg d-lg-none")
 		.container
 			+b.section-title.text-center
-				h2 sWork
-				
+				h2: span Как это работает?
 			.row
+				mixin item(i,p)
+					+e.col.col-xl-2.col-md-4.col-sm-4
+						+e.img-wrap
+							+pic(`work-${i}.png`,'',0)
+						+e.text!= p
+				+item(`1`,`Вы&nbsp;через специальную форму указываете имена людей, которые будут подписаны на&nbsp;именных кирпичах.`)
+
+				+item(`2`,`После ввода имен, вы&nbsp;выбираете Храм или Монастырь в&nbsp;который вы&nbsp;хотите сделать пожертвование.`)
+
+				+item(`3`,`Мы&nbsp;передаем список имен и&nbsp;ваше пожертвование в&nbsp;Храм или Монастырь.`)
+
+				+item(`4`,`Служители Храма или Монастыря подписывают именные кирпичи именами указанными вами в&nbsp;записке.`)
+
+				+item(`5`,`Кирпичи идут на&nbsp;строительство Храма или Монастыря, а&nbsp;имена записываются в&nbsp;специальную церковную книгу для поминовения на&nbsp;каждом богослужении.`)
+
+				+item(`6`,`После записи в&nbsp;церковную книгу на&nbsp;вашу электронную почту мы&nbsp;пришлем сертификат с&nbsp;указанными вами именами и&nbsp;указанием Храма или Монастыря.`)
 	// end sWork
