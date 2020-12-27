@@ -1,17 +1,51 @@
 // start .sNameBrick
 .sNameBrick {
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(58)};
+		--sTPB: #{rem(44)};
+	}
 	position: relative;
 
 	.section-title {
-		@include media-breakpoint-down(lg) {
+
+		@include media-breakpoint-only(md) {
 			display: flex;
 			align-items: center;
-			justify-content: space-between;
+			h2 {
+				margin-bottom: 0;
+				margin-left: rem(13);
+				margin-right: rem(13);
+			}
+			&::after {
+				content: '';
+				display: inline-block;
+				width: 153px;
+				height: 35px;
+				background-image: url('../img/@2x/monasteries-title-img.png');
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
 		}
+		@include media-breakpoint-down(lg) {
+			&::before {
+				content: '';
+				display: inline-block;
+				width: 153px;
+				height: 35px;
+				background-image: url('../img/@2x/monasteries-title-img.png');
+				background-size: 100%;
+				background-position: center;
+				background-repeat: no-repeat;
+			}
+		}
+		
+
+		text-transform: uppercase;
 	}
 
 	&__slider {
-		max-width: 90%;
+		max-width: 88%;
 		margin: 0 auto;
 	}
 
@@ -19,6 +53,13 @@
 		position: relative;
 	}
 
+	picture {
+		margin-bottom: rem(12);
+	}
+
+	&__title {
+		line-height: 1.4;
+	}
 
 
 

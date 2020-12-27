@@ -1,6 +1,8 @@
 // start .sPrayers
 .sPrayers {
-	
+	--sPT: #{rem(2)};
+	--sPB: #{rem(61)};
+	--sTPB: #{rem(27)};
 	.section-title {
 		h3 {
 			text-transform: uppercase;
