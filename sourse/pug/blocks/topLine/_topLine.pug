@@ -3,14 +3,14 @@ mixin topLine()
 	+b.topLine.section#topLine&attributes(attributes)
 		.container
 			.row.align-items-center
-				.col-auto.d-lg-none
+				.col-auto.d-lg-none.order-1
 					+b.toggle-menu-mobile--js
 						span
-				.col-auto
+				.col.col-lg-auto.order-1
 					+e.logo(href="/")
 						img.d-none.d-lg-block.res-i(src="img/@2x/logo.png", alt="СВЯТОЙ АФОН")
 						img.d-lg-none.res-i(src="img/@2x/logo-mob.png", alt="СВЯТОЙ АФОН")
-				+e.searchCol.col-lg-8.col-xl-7
+				+e.searchCol.col-lg-8.col-xl-7.order-2
 					+e.top.d-none.d-lg-flex
 						+e.mail(href="mailto:pochta@naafone.ru")
 							img.res-i(src="img/@2x/mail.png", alt="")
@@ -22,18 +22,18 @@ mixin topLine()
 						+input('Введите Ваш запрос','search')
 						+e.btnSearch(type="submit")
 							+icon('search')
-				.col
+				.col-auto.col-lg.order-last.order-md-1.order-lg-2
 					+b.basket
 						.row
-							.col-xl
-								+e.basket
+							.col-auto.col-lg-12.col-xl
+								+e.basket(href="#")
 									+icon('basket')
 									span.d-none.d-lg-block Корзина:
 								+e.text.d-none.d-lg-block Здравствуйте, у вас
-							+e.col.col-xl
+							+e.col.col-auto.col-lg-12.col-xl
 								+e.quantly 0
 								+e.notes.d-none.d-lg-block записок
-				+e.col.col-12
+				+e.col.col.col-md-12.order-2
 					+b.submitNotes
 						+e.btnWrap
 							+e.btn Подать записки

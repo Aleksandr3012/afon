@@ -1,16 +1,33 @@
 // start .sAbout
 .sAbout {
+	--sPB: #{rem(30)};
+	--sPT: #{rem(40)};
+	--sTPB: #{rem(5)};
+	@include media-breakpoint-up(md) {
+	--sPT: #{rem(60)};
 	--sPB: #{rem(58)};
-	--sPT: #{rem(64)};
+	--sTPB: #{rem(28)};
+
+	}
 	
 	h2 {
 		text-transform: uppercase;
 		font-weight: 700;
+		
+		&::before {
+			position: static !important;
+
+		}
+
+		&::after {
+			display: none !important;
+
+		}
 	}
 
 	h4 {
-		margin-bottom: rem(45);
-		line-height: calc(36/24);
+		margin-bottom: rem(43);
+		line-height: calc(36/22);
 	}
 
 	&__btn {
@@ -21,6 +38,13 @@
 			min-width: rem(350);
 		}
 	}
+
+	.container {
+		@include media-breakpoint-up(xl) {
+			max-width: 1090px;
+		}
+	}
+
 
 
 

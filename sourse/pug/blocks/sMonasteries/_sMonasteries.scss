@@ -46,18 +46,34 @@
 	background-color: #e6e8f6;
 	margin-bottom: rem(20);
 
+	&:hover {
+		background-color: $secondary;
+
+		.monasteriesItem__imgWrap {
+			border-color: $secondary;
+		}
+
+		.monasteriesItem__title, .monasteriesItem__name {
+			color: $body-bg;
+		}
+	}
+
 	&__title {
 		display: block;
 		border-bottom: solid 1px #adabab;
 		padding-bottom: rem(13);
 		color: $body-color;
 		margin-bottom: rem(18);
+		@include mt;
+
 	}
 
 	&__name {
 		color: $body-color;
 		line-height: 1;
 		display: block;
+		@include mt;
+
 	}
 
 	&__imgWrap {
@@ -65,6 +81,14 @@
 		padding: rem(3px);
 		background-color: #fff;
 		display: block;
+		@include mt;
+		@include media-breakpoint-down(sm) {
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
 	}
 
 	&__row {
@@ -74,5 +98,12 @@
 	&__col {
 		padding-top: rem(16);
 		padding-right: rem(20);
+		padding-bottom: rem(10);
+		@include media-breakpoint-down(sm) {
+			padding-left: rem(17);
+			padding-right: rem(17);
+			padding-bottom: rem(40);
+
+		}
 	}
 }

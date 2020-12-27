@@ -1,7 +1,12 @@
 // start .headerBlock
 .headerBlock {
-	--sPT: #{rem(67)};
-	--sPB: #{rem(82)};
+	--sPT: #{rem(0)};
+	--sPB: #{rem(52)};
+
+	@include media-breakpoint-up(md) {
+		--sPT: #{rem(67)};
+		--sPB: #{rem(82)};
+	}
 
 	position: relative;
 	margin-bottom: 1px;
@@ -18,6 +23,17 @@
 	// 	margin-bottom: 1px;
 	// }
 
+	&__picBgWrap {
+		@include media-breakpoint-down(md) {
+			position: relative;
+			height: rem(340);
+		}
+	}
+
+	.mob-bg {
+		z-index: -2;
+	}
+
 	&__btn {
 		@extend .btn;
 		@extend .btn-primary;
@@ -31,19 +47,21 @@
 	
 	&__col {
 		padding-top: rem(34);
-		padding-bottom: rem(50);
 		position: relative;
 		z-index: 1;
-		&::before {
-			content: '';
-			position: absolute;
-			right: -13px;
-			top: 0;
-			height: 100%;
-			width: 100vw;
-			background-color: $body-bg;
-			opacity: 0.64;
-			z-index: -1;
+		@include media-breakpoint-up(md) {
+			padding-bottom: rem(50);
+			&::before {
+				content: '';
+				position: absolute;
+				right: -13px;
+				top: 0;
+				height: 100%;
+				width: 100vw;
+				background-color: $body-bg;
+				opacity: 0.64;
+				z-index: -1;
+			}
 		}
 	}
 
@@ -53,9 +71,18 @@
 		}
 		line-height: 1.4;
 		margin-bottom: rem(50);
+		@include media-breakpoint-down(md){
+			text-align: center;
+		}
 	}
 
-	&__picBgWrap {
+	&__imgWrap {
+		text-align: center;
+		min-height: 215px;
+
+		@include media-breakpoint-down(md){
+			margin-bottom: rem(15);
+		}
 
 	}
 
