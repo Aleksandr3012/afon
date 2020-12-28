@@ -489,7 +489,7 @@ iframe {
 		position: relative;
 		max-width: rem(240);
 		@include media-breakpoint-up(xl){
-			max-width: rem(360);
+			max-width: rem(620);
 
 			&::before,
 			&::after{

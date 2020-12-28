@@ -1,0 +1,21 @@
+mixin sPrayersBlock(data)
+	// start sPrayersBlock
+	+b.SECTION.sPrayersBlock.section#sPrayersBlock&attributes(attributes)
+		.container
+			.text-lg-start.text-center
+				h4.p-2.text-white.strong.bg-primary Здесь вы&nbsp;можете заказать сугубые молитвы&nbsp;&mdash; Сорокоуст о&nbsp;здравии и&nbsp;благополучии ваших мамы и&nbsp;папы в&nbsp;7-ми монастырях
+				h4 #[strong.text-secondary Сорокоуст о&nbsp;здравии]&nbsp;&mdash; это 40&nbsp;сугубых ежедневных молитв о&nbsp;здравии и&nbsp;благополучии ваших родителей.
+				h4 Монахи в&nbsp;монастырях будут возносить молитвы ко&nbsp;Господу за&nbsp;ваших здравствующих родителей в&nbsp;течении 40&nbsp;дней на&nbsp;Литургиях в&nbsp;монастырях.
+			.row
+				mixin item(t)
+					+e.col.col-xl-3.col-md-4.col-sm-6
+						+e.item
+							+e.title= t
+							+pic(`monasteries-1.jpg`,'bg',0)
+							+e.btn.btn.btn-sm.btn-primary(href="#") заказать
+				+item('Киево-Печерская Лавра')
+				- for (var x = 0; x < 7; x++)
+					+item('Псково-Печерский монастырь')
+				.text-center
+					+e.btn-lg.btn(href="#") заказать молебны ко всем святым
+	// end sPrayersBlock
