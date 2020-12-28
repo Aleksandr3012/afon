@@ -16,16 +16,18 @@ mixin mob-mnu()
 		+e.inner
 		
 			+mnu()
-			+e.link(href="#") Молебны о помощи
-			+e.link(href="#") Поставить свечи
-			+e.link(href="#") О нас
-			+e.link(href="#") Наш Блог
-			+e.mail(href="mailto:pochta@naafone.ru")
-				img.res-i(src="img/@2x/mail.png", alt="")
-				|pochta@naafone.ru
-			+e.timetable
-				img.res-i(src="img/@2x/clock.png", alt="")
-				|Пн-Пт: 9:00 - 18:00, Сб: 10:00 - 14:00, Вс - выходной
+			+e.A.link(href="#"  itemprop="url") О нас
+			+e.A.link.sm(href="#"  itemprop="url") Записки
+			+e.A.link.sm(href="#"  itemprop="url") Паломнический центр
+			+e.A.link.sm(href="#"  itemprop="url") Церковная лавка
+			+e.A.link(href="#"  itemprop="url") Наш блог
+			+e.wrap
+				+e.mail(href="mailto:pochta@naafone.ru")
+					img.res-i(src="img/@2x/mail.png", alt="")
+					|pochta@naafone.ru
+				+e.timetable
+					img.res-i(src="img/@2x/clock.png", alt="")
+					|Круглосуточно  Пн-Вс
 			.text-right
 	//  мобильное меню
 mixin top-nav() 

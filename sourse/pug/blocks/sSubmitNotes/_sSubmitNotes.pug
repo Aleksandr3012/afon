@@ -1,0 +1,69 @@
+mixin sSubmitNotes(data)
+	// start sSubmitNotes
+	+b.SECTION.sSubmitNotes.section#sSubmitNotes&attributes(attributes)
+		form
+			input(name='example-input-field', type='hidden')
+			input(class="order", name='order', type='hidden', value=`Заявка  с сайта`) 
+			input(class='utm_source' name='utm_source' type="hidden")
+			input(class='utm_term' name='utm_term' type="hidden")
+			input(class='utm_medium' name='utm_medium' type="hidden")
+			input(class='utm_campaign' name='utm_campaign' type="hidden")
+		.container
+			+e.innerWrap
+				+e.inner
+					+e.row.row
+						+e.lCol.col-lg-8
+							+e.imgWrap
+								+pic('monasteries-8.jpg','','')
+							+e.title Сорокоуст об упокоении в Дивеево
+							+e.imgSm
+								.row
+									mixin img
+										.col-3.col-md
+											+pic('diveevo.jpg','','')
+									+img
+									+img
+									+img
+									+img
+									+img
+									+img
+									+img
+									+img
+								+e.btnWrap
+									+e.btnPlace.link-modal(href="#modal-place") Добавить святое место
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						.col-lg
+							+e.nameWrap
+								+e.nameForm.text-center
+									+e.name Введите имена
+									+e.pic
+										+icon('icon')
+										+pic('diveevo.jpg')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+									+input('Добавьте имя в Р.п.')
+	// end sSubmitNotes

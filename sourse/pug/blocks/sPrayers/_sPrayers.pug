@@ -6,17 +6,17 @@ mixin sPrayers(data)
 				h3 Молебны о помощи
 				
 			.row
-				+prayerItem('1','молебен здравствующим').border-secondary
-				+prayerItem('2','Какие бывают записки?')
-				+prayerItem('3',`молебен<br> усопшим`).border-secondary
-				+prayerItem('4','Как работает сервис святой афон?')
+				+prayerItem('1.jpg','молебен здравствующим').border-secondary
+				+prayerItem('2.jpg','Какие бывают записки?')
+				+prayerItem('3.jpg',`молебен<br> усопшим`).border-secondary
+				+prayerItem('4.jpg','Как работает сервис святой афон?')
 	// end sPrayers
 
 mixin prayerItem(img,t)
 	+e.col.col-lg-6
 		+b.prayerItem.text-center(href="#")&attributes(attributes)
 			+e.wrap
-				+pic(`prayer-bg-${img}.jpg`,'bg')(class="picture-bg")
+				+pic(`prayer-bg-${img}`,'bg')(class="picture-bg")
 				+icon('icon')
 				+e.title!= t
 
@@ -26,6 +26,25 @@ mixin sPrayers4(data)
 	+b.SECTION.sPrayers.section#sPrayers&attributes(attributes)
 		.container 
 			.row
-				+prayerItem('2','Какие бывают записки?') 
-				+prayerItem('4','Как работает сервис святой афон?')
+				+prayerItem('2.jpg','Какие бывают записки?') 
+				+prayerItem('4.jpg','Как работает сервис святой афон?')
+
+
+mixin sPrayers6(data)
+	// start sPrayers
+	+b.SECTION.sPrayers--notes.section#sPrayers&attributes(attributes)
+		.container
+			.row
+				+prayerItem('0.png','Записка о здравии на Литургию')
+				+prayerItem('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
+				+prayerItem('0.png','Неусыпаемая Псалтирь о здравии - 6 мес. в Дивеево')
+				+prayerItem('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
+				+prayerItem('0.png','Записка о здравии на Литургию')
+				+prayerItem('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
+				+prayerItem('0.png','Неусыпаемая Псалтирь о здравии - 6 мес. в Дивеево')
+				+prayerItem('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
+				+prayerItem('0.png','Записка о здравии на Литургию')
+				+prayerItem('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
+				+prayerItem('0.png','Неусыпаемая псалтирь об здравии - 6 мес. в Дивеево')
+				+prayerItem('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
 	// end sPrayers

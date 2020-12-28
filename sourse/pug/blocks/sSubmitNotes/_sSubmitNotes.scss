@@ -1,0 +1,113 @@
+
+// start .sSubmitNotes
+.sSubmitNotes {
+	--sPT: #{rem(20)};
+
+	&__innerWrap {
+		@include media-breakpoint-up(md) {
+			padding: rem(14);
+		}
+		border: 1px solid $secondary;
+	}
+
+	&__inner {
+		position: relative;
+		background-image: url('../img/@2x/webp/prayer-bg-0.webp');
+		padding: rem(20);
+		@include media-breakpoint-up(xl) {
+			padding: rem(20) rem(40) rem(32) rem(20);
+		}
+	}
+
+	&__row {
+		@include media-breakpoint-up(xl) {
+			@include roww(57px);
+		}
+	}
+
+	&__nameWrap {
+		box-shadow: 0 0 7px 1px rgba(64, 69, 100, 0.19);
+		padding: rem(10);
+		background-color: #fff;
+	}
+
+	&__nameForm {
+		border: solid 1px $secondary;
+		padding: rem(20);
+
+		.form-group {
+			margin-bottom: rem(10);
+		}
+
+		.form-control {
+			border-color: transparent transparent #bec0ca transparent;
+			text-align: center;
+			padding: rem(5);
+			font-style: italic;
+		}
+	}
+
+	&__pic {
+		position: relative;
+		display: grid;
+		place-items: center;
+		margin: rem(10);
+
+		img {
+			width: 124px;
+			height: 133px;
+			object-fit: cover;
+			@include a-cent;
+		}
+
+		.icon {
+			font-size: rem(200);
+			color: $secondary;
+		}
+	}
+
+	&__imgWrap {
+		text-align: center;
+		margin-bottom: rem(25);
+	}
+
+	&__title {
+		border-bottom: solid 1px $secondary;
+		padding-bottom: rem(24);
+		text-transform: uppercase;
+		font-size: $h4-font-size;
+		text-align: center;
+		margin-bottom: rem(30);
+	}
+
+	&__name {
+		font-size: $h3-font-size;
+		@include media-breakpoint-up(lg) {
+			font-size: rem(28);
+		}
+	}
+
+	&__imgSm {
+		@include roww(13px);
+		padding-bottom: rem(20);
+		border-bottom: solid 1px $secondary;
+	}
+
+	&__btnWrap {
+		padding-top: rem(23);
+		text-align: right;
+	}
+
+	&__btnPlace {
+		@extend .btn;
+		@extend .btn-secondary;
+	}
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sSubmitNotes
