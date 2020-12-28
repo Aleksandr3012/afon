@@ -24,6 +24,40 @@ mixin modal()
 					 
 						.text-center
 							+e.BUTTON.btn.btn.btn-secondary.px-5(type="submit"  )  Вход
+
+	+b.modal-win--place(id="modal-place" class=" " style="display: none" )
+		+form-wrap
+			+e.title.text-center Добавить место
+			+e.places
+				.row
+					mixin item(i,t)
+						+e.placesItem.col-6.col-sm-4.col-md-3
+							+b.LABEL.Check-block--modal
+								+e.checkImg
+									+pic(`${i}`,'','')
+								input(type="checkbox")
+								+e.lab
+								+e.title!= t
+					+item('diveevo.jpg',`Свято-Успенская Киево-Печерская лавра`)
+					+item('monasteries-3',`Свято-Троицкий Серафимо-Дивеевский монастырь`)
+					+item('monasteries-2',`Псково-Печерский монастырь`)
+					+item('modalImg',`Свято-Покровский женский монастырь`)
+					+item('monasteries-5',`Господу и Богу нашему`)
+					+item('monasteries-6',`Блаженная Матрона Московская`)
+					+item('monasteries-7',`Святитель Николай Чудотворец в Бари`)
+					+item('monasteries-8',`Преподобный Серафим Саровский`)
+					+item('diveevo.jpg',`Свято-Успенская Киево-Печерская лавра`)
+					+item('monasteries-3',`Свято-Троицкий Серафимо-Дивеевский монастырь`)
+					+item('monasteries-2',`Псково-Печерский монастырь`)
+					+item('modalImg',`Свято-Покровский женский монастырь`)
+					+item('monasteries-5',`Господу и Богу нашему`)
+					+item('monasteries-6',`Блаженная Матрона Московская`)
+					+item('monasteries-7',`Святитель Николай Чудотворец в Бари`)
+					+item('monasteries-8',`Преподобный Серафим Саровский`)
+			+e.total Общая стоимость: #[span 1 500 руб.]
+			+e.btnWrap
+				+e.btnPlace.btn.btn-outline-secondary(type="submit") Сохранить
+				+e.btnPlace.btn.btn-outline-secondary(type="submit") Отменить
 	// #modal-call
 	
 	// end modals

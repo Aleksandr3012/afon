@@ -6,6 +6,6 @@
 1. <https://aleksandr3012.github.io/afon/public/04-prayers-2.html>
 1. <https://aleksandr3012.github.io/afon/public/05-blog.html>
 1. <https://aleksandr3012.github.io/afon/public/06-notes.html>
-2. <https://aleksandr3012.github.io/afon/public/07-submit-notes.html>
 1. <https://aleksandr3012.github.io/afon/public/07-candles.html>
+2. <https://aleksandr3012.github.io/afon/public/08-submit-notes.html>
 1. <https://aleksandr3012.github.io/afon/public/09-submit.html>

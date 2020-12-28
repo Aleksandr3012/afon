@@ -253,7 +253,7 @@ function eventHandler() {
 
 	var x = window.location.host;
 	var screenName;
-	screenName = '06.png';
+	screenName = '08.png';
 
 	if (screenName && x === "localhost:3000") {
 		document.body.insertAdjacentHTML("beforeend", "<div class=\"pixel-perfect\" style=\"background-image: url(screen/".concat(screenName, ");\"></div>"));
@@ -330,9 +330,9 @@ function eventHandler() {
 
 	$(".Check-block input").click(function () {
 		if ($(this).is(':checked')) {
-			$(this).parents(".sGetCandle__col").find(".block-add").addClass('active');
+			$(this).parents(".sGetCandle__col, .sSubmitNotes__radioRow, .form-wrap__placesItem").find(".block-add, .Check-block__checkImg").addClass('active');
 		} else {
-			$(this).parents(".sGetCandle__col").find(".block-add").removeClass('active');
+			$(this).parents(".sGetCandle__col, .sSubmitNotes__radioRow, .form-wrap__placesItem").find(".block-add, .Check-block__checkImg").removeClass('active');
 		}
 	});
 }

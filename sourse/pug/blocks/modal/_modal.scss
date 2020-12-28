@@ -181,3 +181,130 @@ a {
 		}
 	}
 }
+
+//modal-place start
+.modal-win {
+	&--place {
+		max-width: 846px;
+		border: 5px solid #b8bee5;
+		padding: rem(40) rem(10) rem(30) rem(17);
+		@include media-breakpoint-up(md){
+			border: 20px solid #b8bee5;
+			padding: rem(50) rem(44) rem(60) rem(50);
+		}
+	}
+
+	.form-wrap {
+		
+		&__placesItem {
+			text-align: center;
+			position: relative;
+			margin-bottom: rem(10);
+		}
+
+		&__places {
+			max-height: rem(450);
+			padding-right: rem(10);
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md) {
+				padding-right: rem(60);
+			}
+			overflow-x: hidden;
+			overflow-y: scroll;
+			border-bottom: solid 1px $secondary;
+
+			.row {
+				@include roww(15px);
+			}
+		}
+
+		&__title {
+			font-size: $h4-font-size;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(40);
+			}
+		}
+
+		&__total {
+			font-size: $h4-font-size;
+			margin-bottom: rem(20);
+			@include media-breakpoint-up(md) {
+				margin-bottom: rem(40);
+			}
+
+			span {
+				color: $primary;
+				display: block;
+				@include media-breakpoint-up(md) {
+					display: inline-block;
+				}
+			}
+		}
+
+		&__btnPlace {
+			@include media-breakpoint-down(sm) {
+				display: block;
+				width: 100%;
+				margin-bottom: rem(10);
+			}
+
+			&:not(:last-child) {
+				@include media-breakpoint-up(md) {
+					margin-right: rem(12);
+				}
+			}
+		}
+
+	}//form-wrap
+
+	.Check-block {
+
+		&__checkImg {
+			position: relative;
+			margin: 0 auto rem(15);
+			max-width: rem(79);
+			display: block;
+			@include media-breakpoint-up(sm) { 
+				max-width: rem(103);
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				border: 5px solid transparent;
+				@include mt;
+			}
+
+			&.active {
+				&::before {
+					border-color: $secondary;
+				}
+			}
+		}
+		&--modal {
+			position: static;
+
+
+			.Check-block__lab {
+				bottom: auto;
+				top: 0;
+			}
+
+			.Check-block__title {
+				font-size: $small;
+				line-height: 1.4;
+			}
+		}
+	}//Check-block
+}//modal-place end
