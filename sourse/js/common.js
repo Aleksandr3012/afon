@@ -328,6 +328,17 @@ function eventHandler() {
 	});
 	// modal window
 
+
+	$(".Check-block input").click(function () {
+
+		if ($(this).is(':checked')) {
+			$(this).parents(".sGetCandle__col").find(".block-add").addClass('active')
+
+		} else {
+			$(this).parents(".sGetCandle__col").find(".block-add").removeClass('active')
+
+		}
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

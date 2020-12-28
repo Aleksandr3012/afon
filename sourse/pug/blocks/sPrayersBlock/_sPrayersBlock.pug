@@ -19,3 +19,20 @@ mixin sPrayersBlock(data)
 				.text-center
 					+e.btn-lg.btn(href="#") заказать молебны ко всем святым
 	// end sPrayersBlock
+mixin sPrayersBlock2(data)
+	// start sPrayersBlock
+	+b.SECTION.sPrayersBlock.section#sPrayersBlock&attributes(attributes)
+		.container 
+			.row
+				mixin item(t)
+					+e.col.col-xl-3.col-md-4.col-sm-6
+						+e.item
+							+e.title= t
+							+pic(`monasteries-1.jpg`,'bg',0)
+							.text-center.strong.mb-2 100 руб.
+							+e.btn--basket.btn.btn-sm.btn-primary(href="#") Корзина
+				+item('Маленькая свеча о здравии в Пантелеимоновом монастыре на святой горе Афон')
+				- for (var x = 0; x < 7; x++)
+					+item('Псково-Печерский монастырь')
+	 
+	// end sPrayersBlock

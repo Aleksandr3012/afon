@@ -1,0 +1,114 @@
+
+// start .sGetCandle
+.sGetCandle {
+	&__title{
+		 color: #fff;
+		 @extend .h4;
+		 font-weight: bold;
+		 padding: rem(20);
+		 font-weight: bold;
+		 background-color: $secondary;
+		 margin-bottom: rem(20);
+		 .icon{
+			 font-size: 1.2em;
+			 margin-right: rem(5);
+			 position: relative;
+			 top: rem(-2);
+		 }
+	}
+	.block-add{
+		opacity: 0;
+		visibility: hidden;
+		@include mt;
+		&.active{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+
+	&__col{
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		text-align: center;
+		margin-bottom: 30px;
+	}
+} // end.sGetCandle
+
+ 
+
+.Check-block{
+	display: block;
+	margin-bottom: rem(13);
+	position: relative;
+	// display: flex;
+	cursor: pointer;
+	picture{
+		flex: 0 0 auto;
+		// text-align: left;
+		margin-bottom: rem(10);
+		display: block;
+	}
+	input{
+		position: absolute;
+		@extend .invisible;
+	}
+	&__title{
+		display: block;
+		font-weight: bold;
+
+	}
+
+	input:checked ~ &__title{
+		color: $secondary;
+	}
+	
+	&__lab{
+		width: 22px;
+		height: 22px;
+		border: 1px solid #d6d7d9;
+		background-color: #eeeff1;
+		display: block;
+		position: absolute;
+		right: 0;
+		bottom: rem(40);
+		&::before{
+			content: '';
+			width: 11px;
+			height: 11px;
+			@include a-cent;
+			background-image: url(../img/svg/check.svg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			@include mt;
+			opacity: 0;
+		}
+	}
+		input:checked~&__lab {
+			&::before{
+				opacity: 1;
+			}
+		}
+}
+
+.Check-block--text{
+	min-width: rem(150) ;
+
+	display: flex;
+	align-items: center;
+	padding-right: rem(35);
+	.Check-block__lab{
+		// position: relative;
+		top: rem(4);
+	}
+}

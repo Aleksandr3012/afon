@@ -1,0 +1,63 @@
+mixin sGetCandle(data)
+	// start sGetCandle
+	+b.SECTION.sGetCandle.section#sGetCandle&attributes(attributes)
+		.container 
+			.row
+				.col-lg-6
+					+e.item
+						+e.title
+							+icon('icon-2')
+							| Выбрать размер свечи:
+					+e.row.row
+						mixin item(i, t)
+							+e.col.col-sm.col-auto
+								+b.LABEL.Check-block
+									input(type="checkbox")
+									+pic(`candle-${i}.png`,'',0)
+									+e.lab
+									+e.title= t
+								+b.block-add
+									button -
+									input(type="number" value='1' )
+									button +
+						+item(`1`,`Малая`)
+						+item(`2`,`Средняя`)
+						+item(`3`,`Большая`)
+						+item(`4`,`Алтарная`)
+						+item(`5`,`33 свечи`)
+								
+						
+
+				.col-lg-6
+					+e.item
+						+e.title
+							+icon('icon-2')
+							| Выбрать место:
+						.row
+							mixin item( t)
+								.col-auto
+									+b.LABEL.Check-block--text
+										input(type="checkbox")
+										+e.title= t
+										+e.lab
+							+item('В монастырь')
+							+item('К иконе')
+							+item('К святому')
+							+item('К празднику')
+							+item('В Израиль')
+							+item('На Афон')
+					+e.item
+						+e.title
+							+icon('icon-2')
+							| Выбрать место:
+						.row
+							mixin item( t)
+								.col-auto
+									+b.LABEL.Check-block--text
+										input(type="checkbox")
+										+e.title= t
+										+e.lab
+							+item('За здравие')
+							+item('За упокой')
+							+item('Благодарственная')
+	// end sGetCandle
