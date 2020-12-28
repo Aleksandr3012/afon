@@ -132,9 +132,13 @@
  
 	&__input[type="checkbox"] + &__lab{
 		&::after{ 
-			content: $form-check-input-checked-bg-image;
-			position: absolute;
-			@include a-cent; 
+			content: '';
+			@include a-cent1; 
+			width: $xsmall;
+			height: 12px;
+			background-image: url(../img/svg/check.svg);
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
 			opacity: 0;
 		}
 	}
@@ -147,8 +151,8 @@
 	}
 
 	&__input:checked + &__lab{
-		background-color: $primary;
-		border-color: $primary;
+		// background-color: $primary;
+		// border-color: $primary;
 		 
 		&::after{
 	
