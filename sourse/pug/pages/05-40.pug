@@ -11,6 +11,7 @@ include ../blocks/sAboutBrick/_sAboutBrick.pug
 include ../blocks/sWork/_sWork.pug
 include ../blocks/sBasket/_sBasket.pug
 include ../blocks/sPrayersList/_sPrayersList.pug
+include ../blocks/sPrayersBlock/_sPrayersBlock.pug
 
 block variables
 	- let  mainPage= null
@@ -29,8 +30,8 @@ block pagecontent
 		.container
 				h1
 					span= title
-	+sPrayersList
-	+sPrayers4
+	+sPrayersBlock
+	+sPrayersList5
 	//- +sAbout()
 	+footer()
 
