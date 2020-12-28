@@ -302,16 +302,17 @@
 		@include mt;
 		position: absolute;
 		z-index: 5;
+		transform-origin: top;
 		@include media-breakpoint-up(lg) {
 			@include a-cent(y);
 			left: 100%;
+			transform-origin: left;
 		}
 		@include media-breakpoint-down(lg) {
-			top: 80%;
+			top: 100%;
 			left: 0;
 		}
 		transform: scale(0);
-		transform-origin: left;
 		background-color: $primary;
 		padding: rem(24) rem(20);
 		display: block;
