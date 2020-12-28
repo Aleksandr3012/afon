@@ -16,22 +16,23 @@ include ../blocks/sGetCandle/_sGetCandle.pug
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'поставьте свечку'
+	- let  title= 'Подать записки в монастыри  России и зарубежья.'
 	title= title
 block pagecontent
 
-	+mob-mnu()
+	//- +mob-mnu()
 	+header()
 		+top-nav()
 		+topLine() 
 	.container
 		+breadcrumb('Главная страница',title)
-	+b.page-title--other-width
+	+b.page-title--submit
 		.container
 				h1
-					span= title
-	+sGetCandle
-	+sPrayersBlock2
+					span= title 
+	+sPrayersBlock9
+
+	+sPrayers4
 	//- +sAbout()
 	+footer()
 
