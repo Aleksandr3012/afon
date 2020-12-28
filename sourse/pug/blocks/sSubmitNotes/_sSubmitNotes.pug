@@ -31,7 +31,21 @@ mixin sSubmitNotes(data)
 									+img
 								+e.btnWrap
 									+e.btnPlace.link-modal(href="#modal-place") Добавить святое место
-
+							mixin radioRow(t)
+								+e.radioRow.row.justify-content-between
+									.col-md-auto
+							+e.radioWrap
+								+radioRow('Поставить свечу за каждое имя')
+								+radioRow('Поставить среднюю свечу за всех')
+								+radioRow('Поставить большую свечу за всех')
+								+radioRow('Пожертвовать в монастырь')
+							+e.total Общая сумма:
+								span 1 500 руб.
+							.row.justify-content-between
+								.col-md
+									+e.btn(type="submit") Сохранить заполнить новую
+								.col-md
+									+e.btnSend(type="submit") Отправить
 
 
 
