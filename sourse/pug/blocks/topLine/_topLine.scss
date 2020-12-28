@@ -6,7 +6,6 @@
 		--sPB: 0;
 	}
 	background-color: $light;
-	overflow: hidden;
 
 	@include media-breakpoint-up(lg) {
 		background-image: url('../img/@2x/webp/topLine-bg.webp');

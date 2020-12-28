@@ -1,0 +1,68 @@
+
+// start .sNotes
+.sNotes {
+	
+
+	&__btn {
+		@extend .btn;
+		@extend .btn-primary;
+	}
+
+	&__imgSm {
+		max-width: rem(50);
+	}
+
+	&__imgWrap {
+		border: 1px solid $secondary;
+		padding: rem(14);
+		
+		picture {
+			@include block(320,340);
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include a-cent;
+			}
+		}
+	}
+
+	&__location {
+		margin-top: rem(23);
+		margin-bottom: rem(26);
+		position: relative;
+		z-index: 2;
+		color: #fff;
+		padding: rem(17) rem(26);
+		@include media-breakpoint-down(md) {
+			text-align: center;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: $secondary;
+		}
+	}
+
+	&__subtext {
+		font-weight: 300;
+	}
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sNotes

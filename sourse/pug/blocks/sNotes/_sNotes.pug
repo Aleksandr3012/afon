@@ -1,0 +1,34 @@
+mixin sNotes(data)
+	// start sNotes
+	+b.SECTION.sNotes.section#sNotes&attributes(attributes)
+		.container
+			+b.section-title.text-center
+				h2 sNotes
+				
+			.row
+				.col-lg-4
+					+e.imgWrap
+						+pic('diveevo.jpg','','')
+				.col
+					.row.align-items-center
+						.col-auto
+							+e.imgSm
+								+pic('diveevo.jpg')
+						.col
+							+e.monastery Свято&#8209;Троицкий Серафимо&#8209;Дивеевский монастырь
+					+e.location
+						h4 Дивеево
+					p Здесь вы&nbsp;можете заказать молитвенные требы: Записки о&nbsp;здравии и&nbsp;упокоении у&nbsp;святых мощей преподобного Серафима Саровского, дивеевских святых, у&nbsp;иконы Богородицы &laquo;Умиление&raquo;, сорокоусты, Псалтири в&nbsp;Свято-Троицком Дивееском монастыре.
+					+e.subtext В наши дни Дивеевскую обитель можно считать едва ли не самой известной среди монастырей России. Название этого места тесно
+					+e.row.row.align-items-end.justify-content-between
+						.col-auto
+							+e.btn(href="#") Читать далее...
+						.col-auto
+							+soc
+								+item-sos('vk-bg.jpg')
+								+item-sos('ok.jpg')
+								+item-sos('fb-bg.jpg')
+								+item-sos('viber.jpg')
+								+item-sos('whatsapp.jpg')
+								+item-sos('telegram.jpg')
+	// end sNotes
