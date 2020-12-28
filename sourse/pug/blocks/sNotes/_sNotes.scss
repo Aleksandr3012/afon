@@ -1,7 +1,7 @@
 
 // start .sNotes
 .sNotes {
-	
+	padding-top: calc(var(--sPT) / 1.5);
 
 	&__btn {
 		@extend .btn;
@@ -10,11 +10,29 @@
 
 	&__imgSm {
 		max-width: rem(50);
+		max-height: rem(50);
+
+		picture {
+			@include block(50,50);
+			width: 50px;
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			@include a-cent;
+		}
 	}
 
 	&__imgWrap {
 		border: 1px solid $secondary;
 		padding: rem(14);
+		@include media-breakpoint-only(md) {
+			margin-bottom: rem(40);
+		}
+		@include media-breakpoint-down(md) {
+			margin-bottom: rem(20);
+		}
 		
 		picture {
 			@include block(320,340);
@@ -28,13 +46,19 @@
 		}
 	}
 
+	&__monastery {
+		font-weight: 700;
+		margin-left: -3px;
+		letter-spacing: rem(-0.2);
+	}
+
 	&__location {
 		margin-top: rem(23);
-		margin-bottom: rem(26);
+		margin-bottom: rem(23);
 		position: relative;
 		z-index: 2;
 		color: #fff;
-		padding: rem(17) rem(26);
+		padding: rem(11) rem(26);
 		@include media-breakpoint-down(md) {
 			text-align: center;
 		}
@@ -51,10 +75,20 @@
 		}
 	}
 
-	&__subtext {
-		font-weight: 300;
+	p {
+		line-height: 1.15;
+		margin-bottom: 1.4rem;
 	}
 
+	&__subtext {
+		font-weight: 300;
+		line-height: 1.15;
+
+	}
+	
+	&__row {
+		@include roww(30px);
+	}
 
 
 

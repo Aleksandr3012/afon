@@ -8,12 +8,24 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
+	+b.toggle-menu-mobile--js
+		span
 	+b.menu-mobile--js
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
 		
 			+mnu()
+			+e.link(href="#") Молебны о помощи
+			+e.link(href="#") Поставить свечи
+			+e.link(href="#") О нас
+			+e.link(href="#") Наш Блог
+			+e.mail(href="mailto:pochta@naafone.ru")
+				img.res-i(src="img/@2x/mail.png", alt="")
+				|pochta@naafone.ru
+			+e.timetable
+				img.res-i(src="img/@2x/clock.png", alt="")
+				|Пн-Пт: 9:00 - 18:00, Сб: 10:00 - 14:00, Вс - выходной
 			.text-right
 	//  мобильное меню
 mixin top-nav() 

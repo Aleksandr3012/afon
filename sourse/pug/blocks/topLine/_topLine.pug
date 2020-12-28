@@ -4,8 +4,7 @@ mixin topLine()
 		.container
 			.row.align-items-center
 				.col-auto.d-lg-none.order-1
-					+b.toggle-menu-mobile--js
-						span
+					+mob-mnu()
 				.col.col-lg-auto.order-1
 					+e.logo(href="/")
 						img.d-none.d-lg-block.res-i(src="img/@2x/logo.png", alt="СВЯТОЙ АФОН")

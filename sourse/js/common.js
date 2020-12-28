@@ -74,6 +74,7 @@ const JSCCommon = {
 					return false;
 				});
 			});
+
 		}
 	},
 
@@ -150,7 +151,7 @@ const JSCCommon = {
 	ifie() {
 		var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
 		if (isIE11) {
-			document.body.innerHTML += '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>';
+			document.body.insertAdjacentHTML("beforeend", '<div class="browsehappy">	<p class=" container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p></div>');
 		}
 	},
 	sendForm() {
@@ -242,9 +243,9 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'blog.png';
+	screenName = '06.png';
 	if (screenName && x === "localhost:3000") {
-		document.body.innerHTML += `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`;
+		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
 	function whenResize() {
