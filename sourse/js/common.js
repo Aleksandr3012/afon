@@ -242,7 +242,7 @@ function eventHandler() {
 	// JSCCommon.CustomInputFile(); 
 	var x = window.location.host;
 	let screenName;
-	screenName = 'main.png';
+	screenName = 'blog.png';
 	if (screenName && x === "localhost:3000") {
 		document.body.innerHTML += `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`;
 	}

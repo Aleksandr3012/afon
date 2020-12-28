@@ -64,13 +64,13 @@
 					<div class="topLine section" id="topLine">
 						<div class="container">
 							<div class="row align-items-center">
-								<div class="col-auto d-lg-none">
+								<div class="col-auto d-lg-none order-1">
 									<div class="toggle-menu-mobile toggle-menu-mobile--js"><span></span>
 									</div>
 								</div>
-								<div class="col-auto"><a class="topLine__logo" href="/"><img class="d-none d-lg-block res-i" src="img/@2x/logo.png" alt="СВЯТОЙ АФОН"/><img class="d-lg-none res-i" src="img/@2x/logo-mob.png" alt="СВЯТОЙ АФОН"/></a>
+								<div class="col col-lg-auto order-1"><a class="topLine__logo" href="/"><img class="d-none d-lg-block res-i" src="img/@2x/logo.png" alt="СВЯТОЙ АФОН"/><img class="d-lg-none res-i" src="img/@2x/logo-mob.png" alt="СВЯТОЙ АФОН"/></a>
 								</div>
-								<div class="topLine__searchCol col-lg-8 col-xl-7">
+								<div class="topLine__searchCol col-lg-8 col-xl-7 order-2">
 									<div class="topLine__top d-none d-lg-flex"><a class="topLine__mail" href="mailto:pochta@naafone.ru"><img class="res-i" src="img/@2x/mail.png" alt=""/>pochta@naafone.ru</a>
 										<div class="topLine__timetable"><img class="res-i" src="img/@2x/clock.png" alt=""/>Пн-Пт: 9:00 - 18:00, Сб: 10:00 - 14:00, Вс - выходной
 										</div>
@@ -86,19 +86,17 @@
 										</button>
 									</div>
 								</div>
-								<div class="col">
+								<div class="col-auto col-lg order-last order-md-1 order-lg-2">
 									<div class="basket">
 										<div class="row">
-											<div class="col-xl">
-												<div class="basket__basket">
-													<svg class="icon icon-basket ">
-														<use xlink:href="img/svg/sprite.svg#basket"></use>
-													</svg><span class="d-none d-lg-block">Корзина:</span>
-												</div>
+											<div class="col-auto col-lg-12 col-xl"><a class="basket__basket" href="#">
+												<svg class="icon icon-basket ">
+													<use xlink:href="img/svg/sprite.svg#basket"></use>
+												</svg><span class="d-none d-lg-block">Корзина:</span></a>
 												<div class="basket__text d-none d-lg-block">Здравствуйте, у вас
 												</div>
 											</div>
-											<div class="basket__col col-xl">
+											<div class="basket__col col-auto col-lg-12 col-xl">
 												<div class="basket__quantly">0
 												</div>
 												<div class="basket__notes d-none d-lg-block">записок
@@ -107,7 +105,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="topLine__col col-12">
+								<div class="topLine__col col col-md-12 order-2">
 									<div class="submitNotes">
 										<div class="submitNotes__btnWrap">
 											<div class="submitNotes__btn">Подать записки
@@ -393,9 +391,9 @@
 				<footer class="footer block-with-lazy">
 					<div class="container">
 						<div class="row">
-							<div class="footer__listCol col-lg-8">
+							<div class="footer__listCol col-lg-8 col-xl-9 order-1">
 								<div class="row">
-									<div class="col-lg-4">
+									<div class="col-md-4">
 										<div class="footer__listTitle">Подать записки
 										</div>
 										<ul>
@@ -405,7 +403,7 @@
 											<li><a href="#">Записки к праздникам</a></li>
 										</ul>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-md-4">
 										<div class="footer__listTitle">Молебны о помощи
 										</div>
 										<ul>
@@ -415,7 +413,7 @@
 											<li><a href="#">Паломнический центр</a></li>
 										</ul>
 									</div>
-									<div class="col-lg-4">
+									<div class="col-md-4">
 										<ul>
 											<li><a href="#">Какие бывают записки?</a></li>
 											<li><a href="#">Как работает сервис?</a></li>
@@ -425,19 +423,25 @@
 									</div>
 								</div>
 							</div>
-							<div class="col">
-								<div class="footer__wrap">
-									<div class="footer__phoneWrap">
-										<div class="footer__phoneIcon"><img class="res-i" src="img/@2x/phone.png" alt="" loading="lazy"/>
+							<div class="col order-3 order-lg-1">
+								<div class="row">
+									<div class="col-md-6 col-lg-12">
+										<div class="footer__wrap">
+											<div class="footer__phoneWrap">
+												<div class="footer__phoneIcon"><img class="res-i" src="img/@2x/phone.png" alt="" loading="lazy"/>
+												</div>
+												<div class="footer__phone"><a href="tel:+7(495)4099235">+7 (495) 409-92-35</a><a href="tel:+7(965)1393510">+7 (965) 139-35-10</a>
+												</div>
+											</div><a class="footer__call" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
 										</div>
-										<div class="footer__phone"><a href="tel:+7(495)4099235">+7 (495) 409-92-35</a><a href="tel:+7(965)1393510">+7 (965) 139-35-10</a>
-										</div>
-									</div><a class="footer__call" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
-									<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="res-i" src="img/@2x/fb.png" alt="" loading="lazy"/></a><a class="soc__item" href="#" target="_blank"><img class="res-i" src="img/@2x/vk.png" alt="" loading="lazy"/></a>
 									</div>
-								</div><a class="footer__btn" href="#">НАПИСАТЬ РУКОВОДИТЕЛЮ</a>
+									<div class="col-md-6 col-lg-12">
+										<div class="soc"><a class="soc__item" href="#" target="_blank"><img class="res-i" src="img/@2x/fb.png" alt="" loading="lazy"/></a><a class="soc__item" href="#" target="_blank"><img class="res-i" src="img/@2x/vk.png" alt="" loading="lazy"/></a>
+										</div><a class="footer__btn" href="#">НАПИСАТЬ РУКОВОДИТЕЛЮ</a>
+									</div>
+								</div>
 							</div>
-							<div class="footer__col col-lg-8"><a class="footer__link" href="#">Пользовательское соглашение</a><a class="footer__link" href="#">Публичная оферта</a><a class="footer__link" href="#">Информация о платежах</a>
+							<div class="footer__col col-md-auto col-lg-8 order-last order-md-2 order-lg-last"><a class="footer__link" href="#">Пользовательское соглашение</a><a class="footer__link" href="#">Публичная оферта</a><a class="footer__link" href="#">Информация о платежах</a>
 							</div>
 						</div>
 						<div class="footer__foot">© 2018—2020

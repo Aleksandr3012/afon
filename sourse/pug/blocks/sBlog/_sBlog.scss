@@ -1,0 +1,93 @@
+
+// start .sBlog
+.sBlog {
+	padding-top: calc(var(--sPT) / 1.25);
+	padding-bottom: calc(var(--sPB) / 4);
+
+	.row {
+		@include roww(30px);
+	}
+
+
+
+
+
+	@include media-breakpoint-up(sm) {}
+	//
+	@include media-breakpoint-between(md, xl) { }
+	//
+	@include media-breakpoint-only(xl) {}
+	//
+	@include media-breakpoint-down(xl) {}
+} // end.sBlog
+
+.blogItem {
+	display: flex;
+	flex-direction: column;
+	height: calc(100% - #{rem(30)});
+	margin-bottom: rem(30);
+	@include media-breakpoint-up(md) {
+		height: calc(100% - #{rem(37)});
+		margin-bottom: rem(37);
+	}
+
+	&__btn {
+		margin-top: auto;
+		@extend .btn;
+		@extend .btn-outline-secondary;
+		padding: rem(5);
+
+		&:hover {
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+
+	&__title {
+		color: #464a68;
+		font-weight: 700;
+		font-size: $h4-font-size;
+		display: block;
+		margin-bottom: .8rem;
+		line-height: 1.4;
+		letter-spacing: rem(1.1);
+	}
+
+	p {
+		max-height: rem(268);
+		line-height: 1.35;
+		overflow: hidden;
+		margin-bottom: rem(24);
+	}
+
+	&__date {
+		color: #464a68;
+		margin-bottom: rem(6);
+		display: block;
+	}
+
+	&__imgWrap {
+		border: 3px solid $secondary;
+		padding: rem(10);
+		@include media-breakpoint-up(sm) {
+			padding: rem(13);
+		}
+		@include mt;
+		margin-bottom: rem(15);
+
+		picture {
+			@include block(325,260);
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				@include a-cent;
+			}
+		}
+
+		&:hover {
+			border-color: $primary;
+		}
+	}
+}

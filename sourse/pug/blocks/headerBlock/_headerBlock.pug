@@ -2,16 +2,18 @@ mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
 		+e.picBgWrap
-			+pic('headerBlock-bg.jpg','bg')(class="picture-bg")
+			+pic('headerBlock-bg.jpg','bg','')(class="picture-bg")
+		+pic('headerBlock-bg-mob.jpg','bg','')(class="picture-bg mob-bg d-md-none")
+		
 		.container
 
 
 			.row
-				+e.col.col-lg-6
+				+e.col.col-md-9.col-lg-8.col-xl-6
 					+e.row.row
-						.col-sm-auto
+						.col-md-auto
 							+e.imgWrap
-								+pic('matrona.jpg')
+								+pic('matrona.jpg','','')
 						.col
 							h4 22&nbsp;ноября&nbsp;&mdash; день Рождения блаженной нашей матушки Матроны Московской. Подать записку Молебен к&nbsp;матушке Матроне о&nbsp;даровании нам духовных и&nbsp;физических сил
 							+e.btn(href="#") подать записку

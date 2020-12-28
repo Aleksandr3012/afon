@@ -36,7 +36,10 @@
 
 	height: calc(100% - #{rem(21)});
 	margin-bottom: rem(21);
-	min-height: rem(223);
+	min-height: rem(174);
+	@include media-breakpoint-up(sm) {
+		min-height: rem(293);
+	}
 	padding: rem(13);
 	.icon{
 		color: #ffffff;
@@ -60,11 +63,14 @@
 		justify-content: center;
 		align-items: center;
 		height: 100%;
+		padding: rem(10);
 	}
 
 	&__title {
 		margin-top: rem(18);
-		@extend .h3;
+		@include media-breakpoint-up(sm) {
+			font-size: $h3-font-size;
+		}
 		text-transform: uppercase;
 		color: #fff;
 		max-width: rem(400);
