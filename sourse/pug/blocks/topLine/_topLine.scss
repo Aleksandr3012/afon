@@ -309,15 +309,20 @@
 			transform-origin: left;
 		}
 		@include media-breakpoint-down(lg) {
-			top: 100%;
 			left: 0;
+		}
+		@include media-breakpoint-only(md) {
+			top: 100%;
+		}
+		@include media-breakpoint-down(md) {
+			top: 150%;
 		}
 		transform: scale(0);
 		background-color: $primary;
 		padding: rem(24) rem(20);
 		display: block;
 		min-width: 235px;
-		min-height: 200px;
+		min-height: 230px;
 	}
 
 	&__link {

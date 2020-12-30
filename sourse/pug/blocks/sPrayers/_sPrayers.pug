@@ -13,7 +13,7 @@ mixin sPrayers(data)
 	// end sPrayers
 
 mixin prayerItem(img,t)
-	+e.col.col-lg-6
+	+e.col.col-lg-6.order-1
 		+b.prayerItem.text-center(href="#")&attributes(attributes)
 			+e.wrap
 				+pic(`prayer-bg-${img}`,'bg')(class="picture-bg")

@@ -1,8 +1,7 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		+e.picBgWrap
-			+pic('headerBlock-bg.jpg','bg','')(class="picture-bg")
+		+pic('headerBlock-bg.jpg','bg','')(class="picture-bg d-none d-md-block")
 		+pic('headerBlock-bg-mob.jpg','bg','')(class="picture-bg mob-bg d-md-none")
 		
 		.container

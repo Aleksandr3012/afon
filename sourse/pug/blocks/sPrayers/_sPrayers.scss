@@ -9,18 +9,22 @@
 		}
 	}
 
-	// &__col {
-	// 	&:nth-child(odd) {
-	// 		.prayerItem {
-	// 			border-color: $secondary;
-	// 		}
-	// 	}
-	// 	&:nth-child(even) {
-	// 		.prayerItem {
-	// 			border-color: $primary;
-	// 		}
-	// 	}
-	// }
+	&__col {
+		// &:nth-child(odd) {
+		// 	.prayerItem {
+		// 		// border-color: $secondary;
+		// 		@include media-breakpoint-down(lg) {
+		// 			order: 13;
+		// 		}
+		// 	}
+		// }
+		&:nth-child(odd) {
+				// border-color: $primary;
+				@include media-breakpoint-down(lg) {
+					order: 2 !important;
+				}
+		}
+	}
 
 	@include media-breakpoint-up(sm) {}
 	//

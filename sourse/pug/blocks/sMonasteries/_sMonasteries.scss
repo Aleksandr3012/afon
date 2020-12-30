@@ -65,6 +65,11 @@
 		color: $body-color;
 		margin-bottom: rem(18);
 		@include mt;
+		@include media-breakpoint-down(md) {
+			padding-left: rem(7);
+			padding-right: rem(7);
+			text-align: center;
+		}
 
 	}
 
