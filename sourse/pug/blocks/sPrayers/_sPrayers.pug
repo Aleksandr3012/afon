@@ -29,22 +29,31 @@ mixin sPrayers4(data)
 				+prayerItem('2.jpg','Какие бывают записки?') 
 				+prayerItem('4.jpg','Как работает сервис святой афон?')
 
+mixin prayerItemImg(img,t)
+	+e.col.col-lg-6.order-1
+		+b.prayerItem.text-center(href="#")&attributes(attributes)
+			+e.wrap
+				<picture class="picture-bg"> 
+					<img class="object-fit-js" src="img/@2x/prayer-bg-0.png" alt="" loading="lazy">
+				</picture>
+				+icon('icon')
+				+e.title!= t
 
 mixin sPrayers6(data)
 	// start sPrayers
 	+b.SECTION.sPrayers--notes.section#sPrayers&attributes(attributes)
 		.container
 			.row
-				+prayerItem('0.png','Записка о здравии на Литургию')
-				+prayerItem('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
-				+prayerItem('0.png','Неусыпаемая Псалтирь о здравии - 6 мес. в Дивеево')
-				+prayerItem('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
-				+prayerItem('0.png','Записка о здравии на Литургию')
-				+prayerItem('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
-				+prayerItem('0.png','Неусыпаемая Псалтирь о здравии - 6 мес. в Дивеево')
-				+prayerItem('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
-				+prayerItem('0.png','Записка о здравии на Литургию')
-				+prayerItem('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
-				+prayerItem('0.png','Неусыпаемая псалтирь об здравии - 6 мес. в Дивеево')
-				+prayerItem('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
+				+prayerItemImg('0.png','Записка о здравии на Литургию')
+				+prayerItemImg('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
+				+prayerItemImg('0.png','Неусыпаемая Псалтирь о здравии - 6 мес. в Дивеево')
+				+prayerItemImg('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
+				+prayerItemImg('0.png','Записка о здравии на Литургию')
+				+prayerItemImg('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
+				+prayerItemImg('0.png','Неусыпаемая Псалтирь о здравии - 6 мес. в Дивеево')
+				+prayerItemImg('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
+				+prayerItemImg('0.png','Записка о здравии на Литургию')
+				+prayerItemImg('0.png','Поминовение о упокоении ежедневные молитвы во все дни Петрова поста').border-secondary
+				+prayerItemImg('0.png','Неусыпаемая псалтирь об здравии - 6 мес. в Дивеево')
+				+prayerItemImg('0.png','Неусыпаемая псалтирь об упокоении - 6 мес. в Дивеево').border-secondary
 	// end sPrayers

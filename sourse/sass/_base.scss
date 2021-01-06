@@ -543,3 +543,10 @@ iframe {
 		}
 	}
 }
+
+.container {
+	// display: none;
+	@include media-breakpoint-down(sm) {
+		max-width: 340px;
+	}
+}
