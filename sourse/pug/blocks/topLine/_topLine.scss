@@ -312,7 +312,7 @@
 		background-color: #fff;
 		transform: scale(0);
 		display: block;
-		min-width: 235px;
+		min-width: 320px;
 		min-height: 440px;
 		@include media-breakpoint-up(lg) {
 			@include a-cent(y);
