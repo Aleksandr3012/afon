@@ -5,10 +5,7 @@
 		margin-bottom: rem(20);
 	}
 	.row{
-		--bs-gutter-x: 10px;
-		@include media-breakpoint-up(sm) {
-			--bs-gutter-x: 30px;
-		}
+		--bs-gutter-x: 30px;
 	}
 	&__item{
 		padding: rem(0) rem(10) rem(28);
@@ -71,19 +68,17 @@
 		text-align: left;
 		line-height: 1.13;
 		picture{
-			width: 35px;
-			height: 35px;
-			margin-right: 10px;
-			@include media-breakpoint-up(sm) {
-				width: 49px;
-				height: 49px;
-				margin-right: 12px;
-			}
+			width: 49px;
+			height: 49px;
+			margin-right: 12px;
 			flex: 0 0 auto;margin-top: 2px;
 		}
 	}
 	&__title{
-		min-height: rem(100);
+		min-height: rem(60);
+		@include media-breakpoint-up(md) {
+			min-height: rem(100);
+		}
 		padding-top: rem(10);
 		padding-bottom: rem(10);
 		display: flex;
