@@ -5,7 +5,10 @@
 		margin-bottom: rem(20);
 	}
 	.row{
-		--bs-gutter-x: 30px;
+		--bs-gutter-x: 10px;
+		@include media-breakpoint-up(sm) {
+			--bs-gutter-x: 30px;
+		}
 	}
 	&__item{
 		padding: rem(0) rem(10) rem(28);
@@ -28,7 +31,10 @@
 			margin-right: rem(-10);
 			display: block;
 			@include block(255,273);
-			margin-bottom: rem(28);
+			margin-bottom: rem(15);
+			@include media-breakpoint-up(sm) {
+				margin-bottom: rem(28);
+			}
 			&::after{
 				content: '';
 				width: calc(100% - 20px);
@@ -65,9 +71,14 @@
 		text-align: left;
 		line-height: 1.13;
 		picture{
-			width: 49px;
-			height: 49px;
-			margin-right: 12px;
+			width: 35px;
+			height: 35px;
+			margin-right: 10px;
+			@include media-breakpoint-up(sm) {
+				width: 49px;
+				height: 49px;
+				margin-right: 12px;
+			}
 			flex: 0 0 auto;margin-top: 2px;
 		}
 	}

@@ -9,14 +9,14 @@ include ../blocks/sNameBrick/_sNameBrick.pug
 include ../blocks/sAbout/_sAbout.pug
 include ../blocks/sAboutBrick/_sAboutBrick.pug
 include ../blocks/sWork/_sWork.pug
-include ../blocks/sBasket/_sBasket.pug
-include ../blocks/sPrayersList/_sPrayersList.pug
 include ../blocks/sPrayersBlock/_sPrayersBlock.pug
+include ../blocks/sGetCandle/_sGetCandle.pug
+
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= '40 молитв о здравии и благополучии родителей  в 7-ми монастырях'
+	- let  title= 'Подать записки к Святым Иконам'
 	title= title
 block pagecontent
 
@@ -25,13 +25,14 @@ block pagecontent
 		+top-nav()
 		+topLine() 
 	.container
-		+breadcrumb('Главная страница','Молебны о помощи','Молебны о помощи здравствующим', title)
-	+b.page-title
+		+breadcrumb('Главная страница',title)
+	+b.page-title--submit
 		.container
 				h1
-					span= title
-	+sPrayersBlock
-	+sPrayersList5
+					span= title 
+	+sPrayersBlock9
+
+	+sPrayers4
 	//- +sAbout()
 	+footer()
 

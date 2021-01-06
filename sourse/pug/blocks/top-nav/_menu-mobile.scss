@@ -76,8 +76,10 @@ $h: rem(2);
 
 .menu-mobile {
 	position: fixed !important;
+
 	z-index: 999;
-	max-width: 85%;
+	max-width: 100%;
+	// max-width: 85%;
 	height: calc(var(--vh, 1vh) * 100);
 	width: 3000px;
 	top: 0;
@@ -93,7 +95,10 @@ $h: rem(2);
 		overflow-x: hidden;
 		overflow-y: auto;
 		-webkit-overflow-scrolling: touch;
-		height: 100%;
+		// height: 100%;
+		height: auto;
+		padding-bottom: rem(40);
+
 	}
 
 	&.active {
@@ -101,6 +106,25 @@ $h: rem(2);
 
 		.toggle-menu-mobile {
 			opacity: 1;
+		}
+	}
+
+	.navMenu {
+		@include media-breakpoint-only(md) {
+			display: flex;
+			flex-wrap: wrap;
+
+			.navMenu__item {
+				flex: 0 0 auto;
+				width: 50%;
+			}
+
+			.navMenu__link {
+				padding-left: rem(5);
+				padding-right: rem(5);
+			}
+
+
 		}
 	}
 
@@ -150,11 +174,23 @@ $h: rem(2);
 		}
 	}
 
+	&__col {
+		@include media-breakpoint-only(md) {
+			border-right: solid 1px rgba($color: $light, $alpha: 0.2);
+		}
+	}
+
 
 	&__wrap {
-		border-top: solid 1px rgba($color: $light, $alpha: 0.2);
+		@include media-breakpoint-down(md) {
+			border-top: solid 1px rgba($color: $light, $alpha: 0.2);
+			height: 100%;
+			margin-top: rem(20);
+		}
+		@include media-breakpoint-only(md) {
+			padding-left: rem(20px);
+		}
 		padding: rem(25) rem(40);
-		margin-top: rem(20);
 	}
 
 	&__mail, &__timetable {
@@ -173,12 +209,15 @@ $h: rem(2);
 	&__link {
 		display: block;
 		text-align: center;
+		@include media-breakpoint-only(md) {
+			text-align: left;
+		}
 		padding: rem(10);
 		color: #b6b8c8;
 
 		&.sm {
 			font-size: $xsmall;
-			padding: rem(3);
+			padding: rem(3) rem(10);
 		}
 	}
 }

@@ -2,7 +2,7 @@ mixin sGetCandle(data)
 	// start sGetCandle
 	+b.SECTION.sGetCandle.section#sGetCandle&attributes(attributes)
 		.container 
-			.row
+			+e.wrapRow.row
 				.col-lg-6
 					+e.item
 						+e.title
@@ -28,7 +28,7 @@ mixin sGetCandle(data)
 								
 						
 
-				.col-lg-6
+				+e.rcol.col-lg-6
 					+e.item
 						+e.title
 							+icon('icon-2')
@@ -49,7 +49,7 @@ mixin sGetCandle(data)
 					+e.item
 						+e.title
 							+icon('icon-2')
-							| Выбрать место:
+							| Выбрать молитву:
 						.row
 							mixin item( t)
 								.col-auto

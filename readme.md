@@ -9,3 +9,6 @@
 1. <https://aleksandr3012.github.io/afon/public/07-candles.html>
 2. <https://aleksandr3012.github.io/afon/public/08-submit-notes.html>
 1. <https://aleksandr3012.github.io/afon/public/09-submit.html>
+1. <https://aleksandr3012.github.io/afon/public/09-submit-1.html>
+1. <https://aleksandr3012.github.io/afon/public/09-submit-2.html>
+1. <https://aleksandr3012.github.io/afon/public/09-submit-3.html>

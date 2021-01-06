@@ -14,8 +14,10 @@
 	}
 
 	&__imgSm {
-		max-width: rem(50);
-		max-height: rem(50);
+		@include media-breakpoint-up(sm) {
+			max-width: rem(50);
+			max-height: rem(50);
+		}
 
 		picture {
 			@include block(50,50);

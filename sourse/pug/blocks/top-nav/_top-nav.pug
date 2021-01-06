@@ -14,21 +14,24 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
-			+mnu()
-			+e.A.link(href="#"  itemprop="url") О нас
-			//- +e.A.link.sm(href="#"  itemprop="url") Записки
-			+e.A.link.sm(href="#"  itemprop="url") Наш блог
-			+e.A.link.sm(href="#"  itemprop="url") Паломнический центр
-			+e.A.link.sm(href="#"  itemprop="url") Церковная лавка
-			+e.wrap
-				+e.mail(href="mailto:pochta@naafone.ru")
-					img.res-i(src="img/@2x/mail.png", alt="")
-					|pochta@naafone.ru
-				+e.timetable
-					img.res-i(src="img/@2x/clock.png", alt="")
-					|Круглосуточно  Пн-Вс
-			.text-right
+			.container
+				.row.align-items-center
+					+e.col.col-md-7
+						+mnu()
+						+e.A.link(href="#"  itemprop="url") О нас
+						//- +e.A.link.sm(href="#"  itemprop="url") Записки
+						+e.A.link.sm(href="#"  itemprop="url") Наш блог
+						+e.A.link.sm(href="#"  itemprop="url") Паломнический центр
+						+e.A.link.sm(href="#"  itemprop="url") Церковная лавка
+					.col
+						+e.wrap
+							+e.mail(href="mailto:pochta@naafone.ru")
+								img.res-i(src="img/@2x/mail.png", alt="")
+								|pochta@naafone.ru
+							+e.timetable
+								img.res-i(src="img/@2x/clock.png", alt="")
+								|Круглосуточно  Пн-Вс
+
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav

@@ -125,7 +125,7 @@
 			padding-top: rem(15);
 			padding-bottom: rem(15);
 			position: relative;
-			z-index: 1;
+			z-index: 4;
 			&::before {
 				content: '';
 				position: absolute;
@@ -248,11 +248,13 @@
 }
 
 .submitNotes {
-	position: relative;
 	z-index: 2;
 	@include media-breakpoint-up(lg) {
 		padding: rem(10) rem(5);
 		margin-right: rem(20);
+	}
+	@include media-breakpoint-up(md) {
+		position: relative;
 	}
 	@include media-breakpoint-up(xl) {
 		margin-right: rem(58);
@@ -260,7 +262,10 @@
 
 	@include media-breakpoint-only(md) {
 		width: 100%;
+	}
 
+	@include media-breakpoint-down(lg) {
+		text-align: center;
 	}
 
 	li {
@@ -303,33 +308,67 @@
 		position: absolute;
 		z-index: 5;
 		transform-origin: top;
+		padding: rem(0) rem(20) rem(20);
+		background-color: #fff;
+		transform: scale(0);
+		display: block;
+		min-width: 235px;
+		min-height: 440px;
 		@include media-breakpoint-up(lg) {
 			@include a-cent(y);
 			left: 100%;
 			transform-origin: left;
+			background-color: $primary;
+			min-height: 195px;
+			padding: rem(24) rem(20);
 		}
 		@include media-breakpoint-down(lg) {
+			box-shadow: 0 1px 20px 4px rgba(0, 0, 0, 0.36);
 			left: 0;
 		}
 		@include media-breakpoint-only(md) {
 			top: 100%;
+			min-width: 100%;
 		}
 		@include media-breakpoint-down(md) {
-			top: 150%;
+			top: 100%;
+			width: 100%;
 		}
-		transform: scale(0);
-		background-color: $primary;
-		padding: rem(24) rem(20);
-		display: block;
-		min-width: 235px;
-		min-height: 160px;
 	}
 
 	&__link {
-		color: #fff;
+		font-weight: 500;
+		color: $secondary;
 		text-decoration: none;
-		&:hover {
-			color: $secondary;
+		font-size: $least;
+		@include media-breakpoint-up(lg) {
+			font-weight: 400;
+			font-size: $em-base;
+			color: #fff;
+			&:hover {
+				color: $secondary;
+			}
+		}
+		@include media-breakpoint-only(md) {
+			line-height: calc(43/20);
+			font-size: rem(20);
 		}
 	}
+
+	&__item {
+		&.title {
+			text-transform: uppercase;
+			margin-top: rem(23);
+			margin-bottom: rem(20);
+
+			.submitNotes__link {
+				font-weight: 700;
+				font-size: $small;
+				@include media-breakpoint-only(md) {
+					font-size: $h4-font-size;
+				}
+			}
+		}
+	}
+
 }

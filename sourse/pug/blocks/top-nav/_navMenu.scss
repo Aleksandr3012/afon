@@ -12,6 +12,9 @@
 	&__link{
 		display: block;
 		text-align: center;
+		@include media-breakpoint-only(md) {
+			text-align: left;
+		}
 		padding: rem(10) rem(12);
 		color: #b6b8c8;
 		@include media-breakpoint-up(lg) {
