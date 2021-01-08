@@ -9,22 +9,23 @@ mixin sGetCandle(data)
 							+icon('icon-2')
 							| Выбрать размер свечи:
 					+e.row.row
-						mixin item(i, t)
-							+e.col.col-sm.col-auto
-								+b.LABEL.Check-block
+						mixin item(i, t, p)
+							+e.col.col-sm
+								+b.LABEL.Check-block--img
 									input(type="checkbox")
-									+pic(`candle-${i}.png`,'',0)
-									+e.lab
+									+pic(`candle-${i}.png`,'',0).d-none.d-sm-block
 									+e.title= t
+									+e.text.d-sm-none= p
+									+e.lab
 								+b.block-add
 									button -
 									input(type="number" value='1' )
 									button +
-						+item(`1`,`Малая`)
-						+item(`2`,`Средняя`)
-						+item(`3`,`Большая`)
-						+item(`4`,`Алтарная`)
-						+item(`5`,`33 свечи`)
+						+item(`1`,`Малая`,`12-15 см`)
+						+item(`2`,`Средняя`,`20-22 см`)
+						+item(`3`,`Большая`,`28-30 см`)
+						+item(`4`,`Алтарная`,`30-40 см`)
+						+item(`5`,`33 свечи`,`20-22 см`)
 								
 						
 
@@ -52,7 +53,7 @@ mixin sGetCandle(data)
 							| Выбрать молитву:
 						.row
 							mixin item( t)
-								.col-auto
+								.col-sm-auto
 									+b.LABEL.Check-block--text
 										input(type="checkbox")
 										+e.title= t

@@ -10,25 +10,24 @@ mixin sBasket(data)
 							.row
 								.col
 									+e.title.small Записка о здравии на Литургию в день памяти преподобного Стилиана Пафлагонского в Свято-Вознесенскую Давидову пустынь
-									.small.strong.text-secondary Вася
-								.col-auto.text-end.small
-									+e.item-control.small
-										+e.edit.text-secondary(href="#") Редактировать   
-										+e.delete(href="#")  Удалить
-									+e.price.strong 100 руб.
+									.small.strong.text-secondary.pb-2 Вася
+								.col-sm-auto.text-sm-end.small
+									.row 
+										+e.item-control.small.col
+											+e.edit.text-secondary(href="#") Редактировать   
+											+e.delete(href="#")  Удалить
+										+e.price.strong.col-sm-12.col-auto 100 руб.
 									
 						+e.item
 							.row
 								.col
 									+e.title.small Свеча маленькая о здравии в Свято-Вознесенскую Давидову пустынь
-								.col-auto.text-end.small
-									+e.item-control
-										+b.block-add
-											button -
-											input(type="number" value='1' )
-											button +
-										+e.delete(href="#")  Удалить
-									+e.price.strong 100 руб.
+								.col-sm-auto.text-sm-end.small
+									.row 
+										+e.item-control.small.col
+											+e.edit.text-secondary(href="#") Редактировать   
+											+e.delete(href="#")  Удалить
+										+e.price.strong.col-sm-12.col-auto 100 руб.
 						p
 							strong Общая сумма:
 							| 
