@@ -95,16 +95,19 @@
 		font-weight: bold;
 	}
 	&--img{
-		display: flex;
-		align-items: center;
-		max-width: rem(280);
-		.Check-block__title{
-			margin-right: auto;
-		}
-		.Check-block__lab{
-			position: relative;
-			margin-left: rem(20);
-			bottom: auto;
+		@include media-breakpoint-down(sm) {
+	 
+			display: flex;
+			align-items: center;
+			max-width: rem(280);
+			.Check-block__title{
+				margin-right: auto;
+			}
+			.Check-block__lab{
+				position: relative;
+				margin-left: rem(20);
+				bottom: auto;
+			}
 		}
 	}
 

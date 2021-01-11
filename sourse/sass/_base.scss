@@ -553,3 +553,9 @@ iframe {
 // 		max-width: 340px;
 // 	}
 // }
+@include media-breakpoint-down(sm){
+
+	.mw-100-mob{
+		max-width: 100% !important;
+	}
+}
