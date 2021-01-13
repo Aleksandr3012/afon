@@ -12,3 +12,7 @@
 1. <https://aleksandr3012.github.io/afon/public/09-submit-1.html>
 1. <https://aleksandr3012.github.io/afon/public/09-submit-2.html>
 1. <https://aleksandr3012.github.io/afon/public/09-submit-3.html>
+1. <https://aleksandr3012.github.io/afon/public/10-lk-1.html>
+1. <https://aleksandr3012.github.io/afon/public/10-lk-2.html>
+1. <https://aleksandr3012.github.io/afon/public/10-lk-3.html>
+1. <https://aleksandr3012.github.io/afon/public/10-lk-4.html>

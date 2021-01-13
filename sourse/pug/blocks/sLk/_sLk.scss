@@ -1,26 +1,47 @@
 
 // start .sLk
 .sLk {
-	--sPT: #{rem(20)};
-	--sTPB: #{rem(30)};
+	--sPT: #{rem(0)};
+	--sTPB: #{rem(20)};
+
+	.row {
+		--bs-gutter-x: #{rem(30)};
+	}
+
+	.container {
+		@include media-breakpoint-up(xl) {
+			padding-left: rem(36);
+		}
+	}
+
+	h2 {
+		@extend .h3;
+	}
+
+	.section-title {
+		margin-top: rem(-5);
+	}
 
 	&__mnuTitle {
 		font-weight: 700;
 		border-bottom: solid 3px $secondary;
-		padding-bottom: rem(18);
-		margin-bottom: rem(25);
+		padding-bottom: rem(13);
+		margin-bottom: rem(20);
 		font-size: rem(22);
 	}
 
 	&__col {
-		padding-top: rem(41);
+		padding-top: rem(15);
+		@include media-breakpoint-up(lg) {
+			padding-top: rem(35);
+		}
 	}
 
 	&__line {
 		position: relative;
 		display: flex;
 		justify-content: center;
-		margin-bottom: rem(15);
+		margin-bottom: rem(10);
 
 		&::before {
 			content: '';
@@ -34,6 +55,7 @@
 		}
 
 		span {
+			font-weight: 500;
 			position: relative;
 			margin-left: auto;
 			margin-right: auto;
@@ -46,8 +68,267 @@
 		}
 	}
 
-	&__cardRow {
-		@include roww(12px);
+	.sLk__cardRow {
+		--bs-gutter-x: #{rem(6)};
+		padding-bottom: rem(15);
+	}
+
+	&__block {
+		box-shadow: 0 0 7px 1px rgba(64, 69, 100, 0.19);
+		padding: rem(5);
+	}
+
+	&__inner {
+		border: 1px solid $secondary;
+		padding: rem(5);
+		@include media-breakpoint-up(sm) {
+			padding: rem(10);
+		}
+		@include media-breakpoint-up(xl) {
+			padding: rem(5) rem(10) rem(10);
+		}
+	}
+
+	.sLk__orderRow {
+		--bs-gutter-x: #{rem(11)};
+		padding-bottom: rem(8);
+	}
+
+	&__imgWrap {
+		position: relative;
+		display: grid;
+		place-items: center;
+		@include media-breakpoint-down(sm) {
+			margin-bottom: rem(7);
+		}
+
+		img {
+			width: 74px;
+			height: 80px;
+			object-fit: cover;
+			@include a-cent;
+		}
+		
+		.icon {
+			font-size: rem(150);
+			@include media-breakpoint-up(md) {
+				font-size: rem(120);
+			}
+			color: $secondary;
+		}
+	}
+
+	&__orderTitle {
+		text-transform: uppercase;
+		font-weight: 500;
+		color: $secondary;
+		font-size: rem(20px);
+		border-bottom: solid 1px #dadada;
+		padding-bottom: rem(13);
+		margin-bottom: rem(7);
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+	}
+
+	&__wrap {
+		@include media-breakpoint-up(sm){
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+		}
+		@include media-breakpoint-down(sm) {
+			text-align: center;
+		}
+		padding-bottom: rem(13);
+	}
+
+	&__names {
+		font-style: italic;
+		font-weight: 600;
+		font-size: $least;
+	}
+	
+	&__price {
+		flex-shrink: 0;
+		font-size: $small;
+		// margin-bottom: rem(15);
+
+		span {
+			font-style: italic;
+			font-size: $least;
+		}
+	}
+
+	&__colorBlock {
+		background-color: #eaf3fc;
+		margin-top: rem(5);
+		padding: rem(15) rem(8) rem(0);
+		@include media-breakpoint-up(sm) {
+			padding: rem(15) rem(8) rem(22);
+		}
+
+		.row {
+			--bs-gutter-x: #{rem(5)};
+		}
+	}
+
+	&__totalPrice {
+		font-weight: 700;
+		display: block;
+		padding-bottom: rem(18);
+		margin-bottom: rem(20);
+		@include media-breakpoint-up(md) {
+			margin-bottom: rem(12);
+		}
+		text-align: center;
+		border-bottom: solid 1px #dadada;
+
+		span {
+			color: $primary;
+		}
+	}
+
+	&__btn, &__btnSm {
+		@extend .btn;
+		border-radius: 20px;
+		font-size: $small;
+		padding: rem(10) rem(25);
+		@include media-breakpoint-up(md) {
+			padding: rem(6) rem(20);
+		}
+		@include media-breakpoint-down(sm) {
+			display: block;
+			max-width: rem(200);
+			width: 100%;
+			margin: 0 auto rem(25);
+		}
+
+		&.btn-success {
+			@include media-breakpoint-up(md) {
+				font-size: $least;
+			}
+
+		}
+
+		&.disabled {
+			opacity: 1;
+		}
+	}
+
+	&__btnWrap {
+		text-align: center;
+		padding-top: rem(22);
+		max-width: rem(540);
+
+		.sLk__btn {
+			border-radius: 23px;
+			padding: rem(10) rem(15);
+		}
+	}
+
+	form {
+		margin-top: rem(-10);
+
+		.sLk__line {
+			margin-top: rem(10);
+			margin-bottom: rem(25);
+		}
+	}
+
+	&__inputWrap {
+		padding-bottom: rem(14);
+		@include media-breakpoint-up(lg) {
+			max-width: rem(540);
+		}
+	}
+
+	&__input {
+		border: 1px solid $secondary;
+		background-color: #eaf3fc;
+		padding: .75rem .72222rem;
+		font-size: $small;
+	}
+
+	&__input-title {
+		font-size: $small;
+		color: #464a68;
+		font-style: italic;
+		font-weight: 500;
+
+	}
+
+	&__input-wrap {
+		margin-bottom: 2px;
+	}
+
+	&__smTxt {
+		font-size: 12px;
+		color: $primary;
+		font-weight: 500;
+		font-style: italic;
+	}
+
+	&__disable {
+		border: none;
+		background-color: transparent;
+		font-size: $small;
+		@include mt;
+		padding: 0;
+
+		@include media-breakpoint-down(md) {
+			display: block;
+			margin-top: rem(5);
+		}
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	table {
+		width: 100%;
+		font-style: italic;
+		font-weight: 500;
+		color: #595d78;
+		@include media-breakpoint-up(xl) {
+			max-width: 801px;
+			margin-left: auto;
+		}
+
+		thead {
+			font-size: $small;
+			td {
+				padding: rem(13) rem(5);
+			}
+		}
+
+		tbody {
+			font-size: $least;
+
+			tr {
+				&:nth-child(odd) {
+					background-color: #eaf3fc;
+				}
+			}
+
+			td {
+				padding: rem(7) rem(5);
+				@include media-breakpoint-up(sm) {
+					padding: rem(15) rem(10);
+				}
+			}
+		}
+
+		td {
+			&:nth-child(2) {
+				text-align: center;
+			}
+
+			&:nth-child(3) {
+				text-align: right;
+			}
+		}
 	}
 
 
@@ -55,6 +336,15 @@
 	@include media-breakpoint-between(md, xl) { }
 	@include media-breakpoint-only(xl) {}
 	@include media-breakpoint-down(xl) {}
+
+	&--calendar {
+		.sLk__btnWrap {
+			padding-top: rem(15);
+			max-width: rem(790);
+			padding-bottom: rem(20);
+
+		}
+	}
 } // end.sLk
 
 
@@ -63,31 +353,50 @@
 		display: flex;
 		align-items: center;
 		color: $body-color;
-		margin-bottom: rem(40);
+		margin-bottom: rem(10);
+		@include media-breakpoint-up(lg) {
+			margin-bottom: rem(28);
+			padding-left: rem(5);
+		}
 
 		img {
 			margin-right: rem(10);
+		}
+
+		&.active {
+			color: $primary;
 		}
 	}
 }
 
 .card {
 	box-shadow: 0 0 7px 1px rgba(64, 69, 100, 0.19);
-	padding: rem(6) rem(5);
+	padding: rem(5);
 	height: calc(100% - #{rem(12)});
 	margin-bottom: rem(12);
 	text-align: center;
 	@include mt;
 
 	&:hover {
-		box-shadow: 0 0 1px 1px rgba(64, 69, 100, 0.19);
+		box-shadow: 0 0 15px 5px rgba(64, 69, 100, 0.19);
+	}
+
+	&__inner {
+		border: 1px solid $secondary;
+		padding: rem(14) rem(7) rem(20);
+		@include media-breakpoint-up(xl) {
+			padding: rem(14) rem(20) rem(20);
+		}
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	&__imgWrap {
 		position: relative;
 		display: grid;
 		place-items: center;
-		margin-bottom: rem(10);
+		margin-bottom: rem(7);
 
 		img {
 			width: 74px;
@@ -95,31 +404,91 @@
 			object-fit: cover;
 			@include a-cent;
 		}
-
+		
 		.icon {
-			font-size: rem(120);
+			font-size: rem(150);
+			@include media-breakpoint-up(md) {
+				font-size: rem(120);
+			}
 			color: $secondary;
 		}
-	}
-
-	&__inner {
-		border: 1px solid $secondary;
-		padding: rem(14) rem(20) rem(25);
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
 	}
 
 	&__title {
 		font-size: $small;
 		text-transform: uppercase;
 		font-weight: 500;
+		margin-bottom: rem(15);
+		line-height: 1.3
 	}
 
 	&__btn {
 		@extend .btn;
-		@extend .btn-success;
 		font-size: rem(17px);
+		padding: .5rem;
+		font-weight: 500;
 		border-radius: rem(20);
+		display: block;
+		max-width: 164px;
+		margin: 0 auto rem(13);
+
+		&.disabled {
+			opacity: 1;
+		}
+
+	}
+
+	&__price {
+		font-size: $small;
+		margin-bottom: rem(15);
+
+		span {
+			font-style: italic;
+			font-size: $least;
+		}
+	}
+
+	&__link {
+		font-size: $least;
+		color: #70748d;
+		font-style: italic;
+		text-decoration: underline;
+	}
+}
+
+.tableBtn {
+	font-weight: 500;
+	font-size: $least;
+	font-style: italic;
+	@include media-breakpoint-up(md) {
+		padding-right: rem(7);
+	}
+
+
+	&__edit, span {
+		color: #595d78;
+	}
+
+	&__edit {
+		border: none;
+		background-color: transparent;
+		@include media-breakpoint-down(sm) {
+			display: block;
+			margin-bottom: rem(10);
+		}
+	}
+
+	&__delete {
+		border: none;
+		background-color: transparent;
+		color: $primary;
+		font-style: italic;
+		font-weight: 500;
+		padding: 0;
+		@include mt;
+		
+		&:hover {
+			color: $red;
+		}
 	}
 }

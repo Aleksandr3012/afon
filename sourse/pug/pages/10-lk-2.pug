@@ -1,0 +1,38 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug
+include ../blocks/sMonasteries/_sMonasteries.pug
+include ../blocks/sPrayers/_sPrayers.pug
+include ../blocks/sNameBrick/_sNameBrick.pug
+include ../blocks/sAbout/_sAbout.pug
+include ../blocks/sAboutBrick/_sAboutBrick.pug
+include ../blocks/sWork/_sWork.pug
+include ../blocks/sPrayersBlock/_sPrayersBlock.pug
+include ../blocks/sLk/_sLk.pug
+
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'Личный кабинет'
+	title= title
+block pagecontent
+
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+		+topLine() 
+	.container
+		+breadcrumb('Главная страница',title)
+	//- +b.page-title--submit
+	//- 	.container
+	//- 			h1
+	//- 				span= title 
+	+sLk-1
+	//- +sAbout()
+	+footer()
+
+
+	

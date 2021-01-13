@@ -737,6 +737,32 @@
 				</form>
 			</div>
 		</div>
+		<div class="modal-win modal-win--calendar" id="modal-calendar" style="display: none">
+			<div class="form-wrap">
+				<form>
+					<div class="form-wrap__title text-center">Добавить дату
+					</div>
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Добавить Имя:</span><input class="form-wrap__input form-control" name="text" type="text" placeholder=""/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<div class="form-wrap__input-wrap form-group">
+						<label><span class="form-wrap__input-title">Добавить дату</span><input class="form-wrap__input form-control" name="date" type="date" placeholder=""/>
+						</label>
+					</div>
+					<!-- +e.input-wrap-->
+					<label class="custom-input"><input class="custom-input__input" name="checkbox" type="checkbox" checked="checked"/><span class="custom-input__lab"></span><span class="custom-input__text">Получать уведомление о приближении даты на почту</span>
+					</label>
+					<div class="form-wrap__btnWrap">
+						<button class="form-wrap__btn btn btn-outline-secondary" type="submit">Отмена
+						</button>
+						<button class="form-wrap__btn btn btn-secondary" type="submit">Добавить
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
 		<!-- #modal-call-->
 		<!-- end modals-->
 		<script src="libs/loading-attribute-polyfill/loading-attribute-polyfill.min.js"></script>

@@ -6,10 +6,10 @@ mixin sLk(data)
 				h2 личный кабинет
 				
 			.row
-				.col-md-4
+				.col-lg-3
 					+e.mnuTitle Меню
 					+b.lkMenu
-						+e.item(href="#")
+						+e.item.active(href="#")
 							img(src="img/@2x/lkMnu-1.png", alt="", loading="lazy")
 							|История заказов
 						+e.item(href="#")
@@ -37,16 +37,173 @@ mixin sLk(data)
 	// end sLk
 
 mixin card
-	.col-lg-4
+	.col-6.col-md-4
 		+b.card
 			+e.inner
 				+e.imgWrap
 					+icon('icon')
 					+pic('diveevo.jpg')
-				+e.title Сорокоуст об упокоении в Дивеево копия
-				+e.price Цена: 
+				+e.title Сорокоуст об упокоении в&nbsp;Дивеево
+				+e.price 
+					span Цена: 
 					strong 500 руб
 				div
-					+e.btn Оплачено
+					+e.btn.btn-success.disabled(href="#") Оплачено
 				div
 					+e.link(href="#") Подробнее о заказе
+
+mixin sLk-1(data)
+	// start sLk
+	+b.SECTION.sLk.section#sLk&attributes(attributes)
+		.container
+			+b.section-title
+				h2 личный кабинет
+				
+			.row
+				.col-lg-3
+					+e.mnuTitle Меню
+					+b.lkMenu
+						+e.item.active(href="#")
+							img(src="img/@2x/lkMnu-1.png", alt="", loading="lazy")
+							|История заказов
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-2.png", alt="", loading="lazy")
+							|Контакты
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-3.png", alt="", loading="lazy")
+							|Избранное
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-4.png", alt="", loading="lazy")
+							|Календарь
+
+				+e.col.col
+					+e.line
+						span Заказ №21974758 от 12.12.2020
+					+e.block
+						+e.inner
+							mixin orderRow(title,t,pr)
+								+e.orderRow.row.align-items-center
+									.col-sm-auto
+										+e.imgWrap
+											+icon('icon')
+											+pic('diveevo.jpg')
+									.col
+										+e.orderTitle= title
+										+e.wrap
+											+e.names= t
+											+e.price
+												span Цена:
+												strong= pr
+											
+							+orderRow('Сорокоуст об упокоении в Дивеево','Владислав, Анатолий, Ирина','100 руб')
+							+orderRow('Свеча маленькая о здравии','Количество: 1','150 руб')
+							+e.colorBlock
+								+e.totalPrice Общая сумма: 
+									span 350 руб
+								.row.justify-content-between
+									.col-sm-auto
+										+e.btn.btn-success.disabled(href="#") Оплачено
+									.col-sm-auto
+										.row.justify-content-center
+											.col-auto
+												+e.btn.btn-outline-primary(type="submit") Удалить заказ
+											.col-auto
+												+e.btn.btn-secondary(type="submit") Повторить заказ
+
+mixin sLk-contacts(data)
+	// start sLk
+	+b.SECTION.sLk.section#sLk&attributes(attributes)
+		.container
+			+b.section-title
+				h2 личный кабинет
+				
+			.row
+				.col-lg-3
+					+e.mnuTitle Меню
+					+b.lkMenu
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-1.png", alt="", loading="lazy")
+							|История заказов
+						+e.item.active(href="#")
+							img(src="img/@2x/lkMnu-2.png", alt="", loading="lazy")
+							|Контакты
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-3.png", alt="", loading="lazy")
+							|Избранное
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-4.png", alt="", loading="lazy")
+							|Календарь
+
+				+e.col.col
+					form
+						+e.line
+							span Контактные данные
+						+e.inputWrap
+							+input('','','Ваше имя:')
+						+e.inputWrap
+							+input('','email','Ваш E-mail:')
+						+e.inputWrap
+							+input('+7','tel','Ваш Телефон:')
+						+e.inputWrap
+							+input('','text','Ваш адрес:')
+							+e.smTxt Адрес необходим для отправки памятных подарков
+						+e.line
+							span Смена пароля
+						+e.inputWrap
+							+input('','password','Новый пароль:')
+						+e.inputWrap
+							+input('','password','Повторите новый пароль:')
+						+e.btnWrap
+							+e.btn.btn-secondary(type="submit") Сохранить изменения
+
+
+mixin sLk-calendar(data)
+	// start sLk
+	+b.SECTION.sLk--calendar.section#sLk&attributes(attributes)
+		.container
+			+b.section-title
+				h2 личный кабинет
+				
+			.row
+				.col-lg-3
+					+e.mnuTitle Меню
+					+b.lkMenu
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-1.png", alt="", loading="lazy")
+							|История заказов
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-2.png", alt="", loading="lazy")
+							|Контакты
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-3.png", alt="", loading="lazy")
+							|Избранное
+						+e.item.active(href="#")
+							img(src="img/@2x/lkMnu-4.png", alt="", loading="lazy")
+							|Календарь
+
+				+e.col.col
+					+e.line
+						span Мой календарь
+					+e.btnWrap
+						+e.btn.btn-secondary.link-modal(href="#modal-calendar") Добавить дату в календарь
+					table
+						thead
+							tr
+								td Название события:
+								td Дата:
+								td
+						tbody
+							mixin tr(d)
+								tr
+									td Крестины Анатолия
+										if d
+											+e.disable(type="submit") Отмена
+									td 22.12.2016
+									td
+										+b.tableBtn
+											+e.edit(href="#") Редактировать
+											span.d-none.d-sm-inline /
+											+e.delete(type="submit") Удалить
+							+tr('d')
+							+tr
+							+tr

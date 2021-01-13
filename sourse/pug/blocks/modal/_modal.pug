@@ -58,6 +58,17 @@ mixin modal()
 			+e.btnWrap
 				+e.btnPlace.btn.btn-outline-secondary(type="submit") Сохранить
 				+e.btnPlace.btn.btn-outline-secondary(type="submit") Отменить
+
+
+	+b.modal-win--calendar(id="modal-calendar" class=" " style="display: none" )
+		+form-wrap
+			+e.title.text-center Добавить дату
+			+input('','text','Добавить Имя:')
+			+input('','date','Добавить дату')
+			+in-c("checkbox",'Получать уведомление о приближении даты на почту')(checked)
+			+e.btnWrap
+				+e.BUTTON.btn.btn.btn-outline-secondary(type="submit"  ) Отмена
+				+e.BUTTON.btn.btn.btn-secondary(type="submit"  ) Добавить
 	// #modal-call
 	
 	// end modals
