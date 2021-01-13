@@ -312,7 +312,9 @@ $grid-breakpoints: (xs: 0,
 // Define the maximum width of `.container` for different screen sizes.
 
 // scss-docs-start container-max-widths
-$container-max-widths: (sm: 340px,
+$container-max-widths: (
+  xs: 360px,
+  sm: 540px,
   md: 700px,
   lg: 960px,
   xl: 1148px,

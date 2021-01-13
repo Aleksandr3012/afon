@@ -31,7 +31,9 @@
 	}
 	&__title{
 		margin-bottom: rem(12);
-		max-width: rem(270);
+		@include media-breakpoint-up(sm){
+			max-width: rem(270);
+		}
 	}
 	&__item-control{
 		margin-bottom: rem(46);
@@ -51,14 +53,35 @@
 		}
 	}
 	&__item{
-		padding-bottom: rem(45);
-		margin-bottom: rem(50);
-		border-bottom: 1px solid $secondary;
+		@include media-breakpoint-up(sm) {
+			padding-bottom: rem(45);
+			margin-bottom: rem(50);
+		}
+		padding-bottom: rem(45 / 2);
+		margin-bottom: rem(50 / 2);
+		&::before{
+			content: '';
+			@include media-breakpoint-up(sm) {
+
+				width: 100%;
+			}
+			width: 70%;
+			height: 1px;
+			border-bottom: 1px solid $secondary;
+			@include a-cent1(x);
+			bottom: 0;
+		}
 		position: relative;
 		&::after{
-			content: url(../img/@2x/basket-icon.png);
+			content: '';
 			@include a-cent1(x);
-			bottom: rem(-32);
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: contain;
+			background-image: url(../img/@2x/basket-icon.png);
+			width: rem(51);
+			height: rem(50);
+			bottom: rem(-24);
 			background-color: #ffffff;
 
 
