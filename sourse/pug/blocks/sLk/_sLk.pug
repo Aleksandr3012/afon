@@ -1,0 +1,52 @@
+mixin sLk(data)
+	// start sLk
+	+b.SECTION.sLk.section#sLk&attributes(attributes)
+		.container
+			+b.section-title
+				h2 личный кабинет
+				
+			.row
+				.col-md-4
+					+e.mnuTitle Меню
+					+b.lkMenu
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-1.png", alt="", loading="lazy")
+							|История заказов
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-2.png", alt="", loading="lazy")
+							|Контакты
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-3.png", alt="", loading="lazy")
+							|Избранное
+						+e.item(href="#")
+							img(src="img/@2x/lkMnu-4.png", alt="", loading="lazy")
+							|Календарь
+
+				+e.col.col
+					+e.line
+						span Декабрь 2020
+					+e.cardRow.row
+						+card
+						+card
+						+card
+					+e.line
+						span Ноябрь 2020
+					+e.cardRow.row
+						+card
+
+	// end sLk
+
+mixin card
+	.col-lg-4
+		+b.card
+			+e.inner
+				+e.imgWrap
+					+icon('icon')
+					+pic('diveevo.jpg')
+				+e.title Сорокоуст об упокоении в Дивеево копия
+				+e.price Цена: 
+					strong 500 руб
+				div
+					+e.btn Оплачено
+				div
+					+e.link(href="#") Подробнее о заказе
