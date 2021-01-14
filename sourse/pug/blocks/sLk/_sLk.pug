@@ -2,7 +2,7 @@ mixin sLk(data)
 	// start sLk
 	+b.SECTION.sLk.section#sLk&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-center
 				h2 личный кабинет
 				
 			.row
@@ -56,7 +56,7 @@ mixin sLk-1(data)
 	// start sLk
 	+b.SECTION.sLk.section#sLk&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-center
 				h2 личный кабинет
 				
 			.row
@@ -114,7 +114,7 @@ mixin sLk-contacts(data)
 	// start sLk
 	+b.SECTION.sLk.section#sLk&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-center
 				h2 личный кабинет
 				
 			.row
@@ -161,7 +161,7 @@ mixin sLk-calendar(data)
 	// start sLk
 	+b.SECTION.sLk--calendar.section#sLk&attributes(attributes)
 		.container
-			+b.section-title
+			+b.section-title.text-center
 				h2 личный кабинет
 				
 			.row
@@ -204,6 +204,6 @@ mixin sLk-calendar(data)
 											+e.edit(href="#") Редактировать
 											span.d-none.d-sm-inline /
 											+e.delete(type="submit") Удалить
-							+tr('d')
+							+tr
 							+tr
 							+tr
