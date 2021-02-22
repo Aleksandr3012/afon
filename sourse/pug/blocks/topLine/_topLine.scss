@@ -250,7 +250,7 @@
 .submitNotes {
 	z-index: 2;
 	@include media-breakpoint-up(lg) {
-		padding: rem(10) rem(5);
+		
 		margin-right: rem(20);
 	}
 	@include media-breakpoint-up(md) {
@@ -294,11 +294,27 @@
 
 	}
 
+	&__btn{
+		padding: rem(10) rem(5);
+		&::after{
+			content: '';
+			display: inline-block;
+			@include triangle(12px,currentColor, down);
+			position: relative;
+			top: em(-3);
+			margin-left: rem(2);
+		}
+	}
 	&__btnWrap {
 		cursor: pointer;
-		&:hover, &:focus, &:active {
+		@include media-breakpoint-up(lg) {
+		}
+		&:hover, &:focus {
+			background-color: #fff;
+			color: $body-color;
 			.submitNotes__submenuWrap {
 				transform: scale(1);
+				visibility: visible
 			}
 		}
 	}
@@ -310,16 +326,18 @@
 		transform-origin: top;
 		padding: rem(0) rem(20) rem(20);
 		background-color: #fff;
-		transform: scale(0);
+		transform: scaleY(0);
 		display: block;
-		min-width: 300px;
-		min-height: 440px;
+		min-width: 260px;
+		min-height: 340px;
 		@include media-breakpoint-up(lg) {
-			@include a-cent(y);
-			left: 100%;
-			transform-origin: left;
-			background-color: $primary;
-			min-height: 195px;
+			visibility: hidden;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			transform-origin: top;
+			background-color: #fff;
+			min-height: 145px;
 			padding: rem(24) rem(20);
 		}
 		@include media-breakpoint-down(lg) {
@@ -343,8 +361,9 @@
 		font-size: $least;
 		@include media-breakpoint-up(lg) {
 			font-weight: 400;
-			font-size: $em-base;
-			color: #fff;
+			font-size: ($em-base * 1.06);
+			white-space: nowrap;
+			// color: #fff;
 			&:hover {
 				color: $secondary;
 			}

@@ -10,7 +10,13 @@
 		}
 		border: 1px solid $secondary;
 	}
-
+	.col-3.col-md{
+		margin-bottom: calc(var(--bs-gutter-x) / 2);
+		@include media-breakpoint-up(md) {
+		max-width: 73.17px;
+		min-width: 73.17px;
+		}
+	}
 	&__inner {
 		overflow: hidden;
 		position: relative;
@@ -89,6 +95,11 @@
 		text-align: center;
 		margin-bottom: rem(20);
 		margin-top: rem(7);
+			@include media-breakpoint-down(md) {
+				margin-left: auto;
+				margin-right: auto;
+				max-width: 100px;
+			}
 	}
 
 	&__title {
