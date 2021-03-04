@@ -340,6 +340,10 @@ function eventHandler() {
 
 		}
 	})
+
+	$('.sNotes').on('click', '.sNotes__btn--js', function(){
+		$(this).toggleClass('active').parents('.accardion-js').find('.sNotes__textWrap--js').toggleClass('active');
+	})
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

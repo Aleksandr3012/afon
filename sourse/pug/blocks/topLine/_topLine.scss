@@ -324,12 +324,12 @@
 		position: absolute;
 		z-index: 5;
 		transform-origin: top;
-		padding: rem(0) rem(20) rem(20);
+		padding: rem(5) rem(20);
 		background-color: #fff;
 		transform: scaleY(0);
 		display: block;
 		min-width: 260px;
-		min-height: 340px;
+		// min-height: 340px;
 		@include media-breakpoint-up(lg) {
 			visibility: hidden;
 			position: absolute;
@@ -356,9 +356,9 @@
 
 	&__link {
 		font-weight: 500;
-		color: $secondary;
+		color: $body-color;
 		text-decoration: none;
-		font-size: $least;
+		font-size: $small;
 		@include media-breakpoint-up(lg) {
 			font-weight: 400;
 			font-size: ($em-base * 1.06);
@@ -377,12 +377,13 @@
 	&__item {
 		&.title {
 			text-transform: uppercase;
-			margin-top: rem(23);
-			margin-bottom: rem(20);
+			margin-top: rem(10);
+			margin-bottom: rem(15);
 
 			.submitNotes__link {
 				font-weight: 700;
 				font-size: $small;
+				color: $secondary;
 				@include media-breakpoint-only(md) {
 					font-size: $h4-font-size;
 				}

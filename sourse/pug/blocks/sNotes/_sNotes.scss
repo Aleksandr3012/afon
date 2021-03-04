@@ -11,6 +11,16 @@
 		@include media-breakpoint-down(md) {
 			margin-bottom: rem(15);
 		}
+
+		&::before {
+			content: 'Читать далее...';
+		}
+
+		&.active {
+			&::before {
+				content: 'Скрыть';
+			}
+		}
 	}
 
 	&__imgSm {
@@ -63,7 +73,7 @@
 		margin-top: rem(23);
 		margin-bottom: rem(23);
 		position: relative;
-		z-index: 2;
+		z-index: 1;
 		color: #fff;
 		padding: rem(11) rem(26);
 		@include media-breakpoint-down(md) {
@@ -100,6 +110,16 @@
 	
 	&__row {
 		@include roww(30px);
+	}
+
+	&__textWrap {
+		height: 160px;
+		overflow: hidden;
+		margin-bottom: rem(5);
+		
+		&.active {
+			height: auto;
+		}
 	}
 
 

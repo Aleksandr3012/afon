@@ -335,6 +335,9 @@ function eventHandler() {
 			$(this).parents(".sGetCandle__col, .sSubmitNotes__radioRow, .form-wrap__placesItem").find(".block-add, .Check-block__checkImg").removeClass('active');
 		}
 	});
+	$('.sNotes').on('click', '.sNotes__btn--js', function () {
+		$(this).toggleClass('active').parents('.accardion-js').find('.sNotes__textWrap--js').toggleClass('active');
+	});
 }
 
 ;
