@@ -561,5 +561,13 @@ iframe {
 
 .btn-success {
 	color: #fff !important;
+}
 
+.readmore {
+	overflow: hidden;
+	@include mt;
+	max-height: 58px;
+	@include media-breakpoint-up(md) {
+		max-height: 84px;
+	}
 }

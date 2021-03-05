@@ -344,6 +344,12 @@ function eventHandler() {
 	$('.sNotes').on('click', '.sNotes__btn--js', function(){
 		$(this).toggleClass('active').parents('.accardion-js').find('.sNotes__textWrap--js').toggleClass('active');
 	})
+
+	$('.readmore').readmore({ 
+		moreLink: '<button class="page-title__btn" type="button">Подробнее</button>',
+		lessLink: '<button class="page-title__btn" type="button">Скрыть</button>'
+	});
+
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
